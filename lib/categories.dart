@@ -3,15 +3,12 @@ import 'package:recipe/HomeScreen.dart';
 import 'package:recipe/color.dart';
 import 'package:recipe/constant.dart';
 
-import 'Ingredients.dart';
 class CategoriesPage extends StatefulWidget {
   CategoriesPage({super.key});
   @override
   _CategoriesPageState createState() => _CategoriesPageState();
 }
 class _CategoriesPageState extends State<CategoriesPage> {
-
-
   final List<Category> categories = [
     Category(
       id: 1,
@@ -274,8 +271,6 @@ class _CategoriesPageState extends State<CategoriesPage> {
     Icons.person_outline_rounded,
   ];
 
-
-
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -376,79 +371,73 @@ class _CategoriesPageState extends State<CategoriesPage> {
         ),
       ),
       bottomNavigationBar: Container(
-
         height: 50,
-        color:const Color.fromARGB(100, 255, 236, 96),
+        color: const Color.fromARGB(100, 255, 236, 96),
+        child: Row(
+          mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+          children: List.generate(
+            icons.length,
+                (index) => GestureDetector(
+              onTap: () {
+                setState(() {
+                  selectedPage = index;
+                });
+                if (selectedPage == 0) {
+                  Navigator.push(
+                    context,
+                    MaterialPageRoute(builder: (context) => HomeScreen()),
 
-        child:Row(
-            mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-            children:List.generate(
-              icons.length,
-                  (index) => GestureDetector(
-                    onTap: () {
-                      setState(() {
-                        selectedPage = index;
-                      });
-                      if (selectedPage == 0) {
-                        Navigator.push(
-                          context,
-                          MaterialPageRoute(builder: (context) => HomeScreen()),
-                        );
-                      } else if (selectedPage == 1) {
-                        Navigator.push(
-                          context,
-                          MaterialPageRoute(builder: (context) => CategoriesPage()),
-                        );
-                      }else if (selectedPage == 2) {
-                        Navigator.push(
-                          context,
-                          MaterialPageRoute(builder: (context) => HomeScreen()),
-                        );
-                      }
-                      else if (selectedPage == 3) {
-                        Navigator.push(
-                          context,
-                          MaterialPageRoute(builder: (context) => HomeScreen()),
-                        );
-                      }
-                      // Add more else if clauses for the other screens
-                    },
-                    child: SizedBox(
-                  height: 40,
-                  width: 30,
-                  child: Column(
-                    mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                    crossAxisAlignment: CrossAxisAlignment.center,
-
-                    children: [
-                      Icon(
-                        icons[index],
-                        color: index == selectedPage ? orange : Colors.black,
-                        size: 35,
+                  );
+                } else if (selectedPage == 1) {
+                  Navigator.push(
+                    context,
+                    MaterialPageRoute(builder: (context) => CategoriesPage()),
+                  );
+                } else if (selectedPage == 2) {
+                  Navigator.push(
+                    context,
+                    MaterialPageRoute(builder: (context) => HomeScreen()),
+                  );
+                } else if (selectedPage == 3) {
+                  Navigator.push(
+                    context,
+                    MaterialPageRoute(builder: (context) => const HomeScreen()),
+                  );
+                }
+              },
+              child: SizedBox(
+                height: 40,
+                width: 30,
+                child: Column(
+                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                  crossAxisAlignment: CrossAxisAlignment.center,
+                  children: [
+                    Icon(
+                      icons[index],
+                      color: index == selectedPage ? Colors.orange : Colors.black,
+                      size: 35,
+                    ),
+                    index == selectedPage
+                        ? Container(
+                      height: 3,
+                      width: 30,
+                      decoration: BoxDecoration(
+                        borderRadius: BorderRadius.circular(50.0),
+                        color: Colors.orange,
                       ),
-                      index == selectedPage
-                          ? Container(
-                        height: 3,
-                        width: 30,
-                        decoration: BoxDecoration(
-                            borderRadius: BorderRadius.circular(50.0),
-                            color: orange),
-                      )
-                          : Container(),
-
-                    ],
-                  ),
+                    )
+                        : Container(),
+                  ],
                 ),
               ),
-
-            )
+            ),
+          ),
         ),
-
       ),
+
     );
   }
 }
-
 
 class SubcategoriesPage extends StatelessWidget {
   final Category category;
@@ -534,6 +523,7 @@ class SubcategoriesPage extends StatelessWidget {
           ],
         ),
       ),
+
     );
   }
 }
@@ -635,13 +625,13 @@ class SubSubcategoriesPage extends StatelessWidget {
                             ),
                           ],
                         ),
-                          onTap: () {
-                            Navigator.of(context).push(
-                              MaterialPageRoute(
-                                builder: (context) => IngredientsPage(subsubcategory: subsubcategory),
-                              ),
-                            );
-                          }
+                        onTap: () {
+                          Navigator.of(context).push(
+                            MaterialPageRoute(
+                              builder: (context) => SubSubcategoriesPage( key: UniqueKey(),subcategory : subcategory),
+                            ),
+                          );
+                        },
                       ),
                     );
                   },
@@ -651,6 +641,7 @@ class SubSubcategoriesPage extends StatelessWidget {
           ],
         ),
       ),
+
     );
   }
 }
