@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'categories.dart';
 import 'constant.dart';
 import 'users.dart';
 import 'color.dart';
@@ -209,11 +210,16 @@ class _HomeScreenState extends State<HomeScreen>{
                                                 image:DecorationImage(
                                                     image: AssetImage('assets/images/mercimek.png'),
                                                     fit:BoxFit.cover)),
+
                                           ),),
+
                                       ]
+
                                       )
                                   ),
+
                                 ],
+
                               ),
 
                             ),
@@ -273,7 +279,6 @@ class _HomeScreenState extends State<HomeScreen>{
 
           child:Row(
               mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-
               children:List.generate(
                 icons.length,
                     (index) => GestureDetector(
@@ -281,12 +286,17 @@ class _HomeScreenState extends State<HomeScreen>{
                     setState(() {
                       selectedPage = index;
                     });
+                    Navigator.push(
+                      context,
+                      MaterialPageRoute(builder: (context) => CategoriesPage()),
+                    );
+
                   },
+
                   child: SizedBox(
                     height: 40,
                     width: 30,
                     child: Column(
-
                       mainAxisAlignment: MainAxisAlignment.spaceBetween,
                       crossAxisAlignment: CrossAxisAlignment.center,
 
@@ -304,7 +314,8 @@ class _HomeScreenState extends State<HomeScreen>{
                               borderRadius: BorderRadius.circular(50.0),
                               color: orange),
                         )
-                            : Container()
+                            : Container(),
+
                       ],
                     ),
                   ),

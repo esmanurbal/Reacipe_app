@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'HomeScreen.dart';
+import 'categories.dart';
 void main() {
   runApp(const MyApp());
 }
@@ -12,11 +13,8 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       title: 'Flutter Demo',
-      theme: ThemeData(
-
-        primarySwatch: Colors.blue,
-      ),
-      home:const HomeScreen(),
+      theme: ThemeData(),
+      home: HomeScreen(),
     );
   }
 }
