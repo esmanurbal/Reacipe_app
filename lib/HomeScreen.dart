@@ -35,7 +35,7 @@ class _HomeScreenState extends State<HomeScreen>{
                       crossAxisAlignment: CrossAxisAlignment.start,
                       children: [
                         Container(
-                          padding: const EdgeInsets.only(top: 10),
+
                           // Add padding to the top of the container
                           child:Column(children: [
                             Padding(padding: const EdgeInsets.only(right: 50),
@@ -272,67 +272,71 @@ class _HomeScreenState extends State<HomeScreen>{
           ),
 
         ),
-        bottomNavigationBar: Container(
+      bottomNavigationBar: Container(
+        height: 50,
+        color: const Color.fromARGB(100, 255, 236, 96),
+        child: Row(
+          mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+          children: List.generate(
+            icons.length,
+                (index) => GestureDetector(
+              onTap: () {
+                setState(() {
+                  selectedPage = index;
+                });
+                if (selectedPage == 0) {
+                  Navigator.push(
+                    context,
+                    MaterialPageRoute(builder: (context) => HomeScreen()),
 
-          height: 50,
-          color:const Color.fromARGB(100, 255, 236, 96),
-
-          child:Row(
-              mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-              children:List.generate(
-                icons.length,
-                    (index) => GestureDetector(
-                      onTap: () {
-                        setState(() {
-                          selectedPage = index;
-                        });
-                        if (selectedPage == 0) {
-                          Navigator.push(
-                            context,
-                            MaterialPageRoute(builder: (context) => HomeScreen()),
-                          );
-                        } else if (selectedPage == 1) {
-                          Navigator.push(
-                            context,
-                            MaterialPageRoute(builder: (context) => CategoriesPage()),
-                          );
-                        }
-                        // Add more else if clauses for the other screens
-                      },
-
-
-                  child: SizedBox(
-                    height: 40,
-                    width: 30,
-                    child: Column(
-                      mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                      crossAxisAlignment: CrossAxisAlignment.center,
-
-                      children: [
-                        Icon(
-                          icons[index],
-                          color: index == selectedPage ? orange : Colors.black,
-                          size: 35,
-                        ),
-                        index == selectedPage
-                            ? Container(
-                          height: 3,
-                          width: 30,
-                          decoration: BoxDecoration(
-                              borderRadius: BorderRadius.circular(50.0),
-                              color: orange),
-                        )
-                            : Container(),
-
-                      ],
+                  );
+                } else if (selectedPage == 1) {
+                  Navigator.push(
+                    context,
+                    MaterialPageRoute(builder: (context) => CategoriesPage()),
+                  );
+                } else if (selectedPage == 2) {
+                  Navigator.push(
+                    context,
+                    MaterialPageRoute(builder: (context) => HomeScreen()),
+                  );
+                } else if (selectedPage == 3) {
+                  Navigator.push(
+                    context,
+                    MaterialPageRoute(builder: (context) => const HomeScreen()),
+                  );
+                }
+              },
+              child: SizedBox(
+                height: 40,
+                width: 30,
+                child: Column(
+                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                  crossAxisAlignment: CrossAxisAlignment.center,
+                  children: [
+                    Icon(
+                      icons[index],
+                      color: index == selectedPage ? Colors.orange : Colors.black,
+                      size: 35,
                     ),
-                  ),
+                    index == selectedPage
+                        ? Container(
+                      height: 3,
+                      width: 30,
+                      decoration: BoxDecoration(
+                        borderRadius: BorderRadius.circular(50.0),
+                        color: Colors.orange,
+                      ),
+                    )
+                        : Container(),
+                  ],
                 ),
-
-              )
+              ),
+            ),
           ),
+        ),
+      ),
 
-        )
     );
 
   }

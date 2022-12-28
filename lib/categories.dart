@@ -397,11 +397,20 @@ class _CategoriesPageState extends State<CategoriesPage> {
                           context,
                           MaterialPageRoute(builder: (context) => CategoriesPage()),
                         );
+                      }else if (selectedPage == 2) {
+                        Navigator.push(
+                          context,
+                          MaterialPageRoute(builder: (context) => HomeScreen()),
+                        );
+                      }
+                      else if (selectedPage == 3) {
+                        Navigator.push(
+                          context,
+                          MaterialPageRoute(builder: (context) => HomeScreen()),
+                        );
                       }
                       // Add more else if clauses for the other screens
                     },
-
-
                     child: SizedBox(
                   height: 40,
                   width: 30,
