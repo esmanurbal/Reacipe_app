@@ -1,6 +1,15 @@
 import 'package:flutter/material.dart';
+import 'package:recipe/HomeScreen.dart';
 import 'package:recipe/color.dart';
-class CategoriesPage extends StatelessWidget {
+import 'package:recipe/constant.dart';
+class CategoriesPage extends StatefulWidget {
+  CategoriesPage({super.key});
+  @override
+  _CategoriesPageState createState() => _CategoriesPageState();
+}
+class _CategoriesPageState extends State<CategoriesPage> {
+
+
   final List<Category> categories = [
     Category(
       id: 1,
@@ -255,17 +264,43 @@ class CategoriesPage extends StatelessWidget {
   ];
 
 
+  int selectedPage = 0;
+  List<IconData> icons = [
+    Icons.home_rounded,
+    Icons.bar_chart_rounded,
+    Icons.favorite_outline_rounded,
+    Icons.person_outline_rounded,
+  ];
+
+
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       body: Container(
         decoration: getTransitionalDecoration(),
+        padding: const EdgeInsets.only(top: 10),
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
+
+            Padding(padding: const EdgeInsets.only(right: 90),
+              child:
+              Text.rich(
+                TextSpan(
+                  children: [
+                    const TextSpan(text: "R", style: TextStyle(color: Color.fromARGB(200, 87,4,14))),
+                    const TextSpan(text: "E", style: TextStyle(color: Color.fromARGB(200,87,4,14))),
+                    const TextSpan(text: "C", style: TextStyle(color: Color.fromARGB(200,87,4,14))),
+                    TextSpan(children:[WidgetSpan(child: Image.asset(recipeGif,height:50,width:50,)),]),
+                    const TextSpan(text: "P", style: TextStyle(color: Color.fromARGB(200,87,4,14))),
+                    const TextSpan(text: "E", style: TextStyle(color: Color.fromARGB(200,87,4,14))),
+                  ],
+                ),
+              ),),
             const SizedBox(
-                height: 30
-            ),
+                height: 30),
+
             Padding(
               padding: const EdgeInsets.symmetric(vertical: 30, horizontal: 20),
               child: Container(
@@ -337,6 +372,58 @@ class CategoriesPage extends StatelessWidget {
             ),
           ],
         ),
+      ),
+      bottomNavigationBar: Container(
+
+        height: 50,
+        color:const Color.fromARGB(100, 255, 236, 96),
+
+        child:Row(
+            mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+            children:List.generate(
+              icons.length,
+                  (index) => GestureDetector(
+                onTap: () {
+                  setState(() {
+                    selectedPage = index;
+                  });
+                  Navigator.push(
+                    context,
+                    MaterialPageRoute(builder: (context) => const HomeScreen()),
+                  );
+                },
+
+                child: SizedBox(
+                  height: 40,
+                  width: 30,
+                  child: Column(
+                    mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                    crossAxisAlignment: CrossAxisAlignment.center,
+
+                    children: [
+                      Icon(
+                        icons[index],
+                        color: index == selectedPage ? orange : Colors.black,
+                        size: 35,
+                      ),
+                      index == selectedPage
+                          ? Container(
+                        height: 3,
+                        width: 30,
+                        decoration: BoxDecoration(
+                            borderRadius: BorderRadius.circular(50.0),
+                            color: orange),
+                      )
+                          : Container(),
+
+                    ],
+                  ),
+                ),
+              ),
+
+            )
+        ),
+
       ),
     );
   }

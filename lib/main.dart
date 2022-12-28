@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:recipe/categories.dart';
 import 'HomeScreen.dart';
 
 void main() {
@@ -14,7 +15,7 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
       title: 'Flutter Demo',
       theme: ThemeData(),
-      home: HomeScreen(),
+      home:  HomeScreen(),
     );
   }
 }
