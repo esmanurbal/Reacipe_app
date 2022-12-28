@@ -359,7 +359,7 @@ class _CategoriesPageState extends State<CategoriesPage> {
                         onTap: () {
                           Navigator.of(context).push(
                             MaterialPageRoute(
-                              builder: (context) => SubcategoriesPage(
+                              builder: (context) => SubCategoriesPage(
                                 key: UniqueKey(),
                                 category: category,
                               ),
@@ -440,11 +440,17 @@ class _CategoriesPageState extends State<CategoriesPage> {
   }
 }
 
+class SubCategoriesPage extends StatefulWidget{
+  SubCategoriesPage({super.key, required this.category});
+  final Category category;
+  @override
+  _SubCategoriesPageState createState() => _SubCategoriesPageState(key: UniqueKey(), category: this.category);
+}
 
-class SubcategoriesPage extends StatelessWidget {
+class _SubCategoriesPageState extends State<SubCategoriesPage> {
   final Category category;
 
-  SubcategoriesPage({required Key key, required this.category}) : super(key: key);
+  _SubCategoriesPageState({required Key key, required this.category});
 
   @override
   Widget build(BuildContext context) {
@@ -528,11 +534,18 @@ class SubcategoriesPage extends StatelessWidget {
     );
   }
 }
+class SubSubcategoriesPage extends StatefulWidget{
+  SubSubcategoriesPage({super.key, required this.subcategory});
+  final Subcategory subcategory;
+  @override
+  _SubSubcategoriesPage createState() => _SubSubcategoriesPage(key: UniqueKey(), subcategory: this.subcategory);
 
-class SubSubcategoriesPage extends StatelessWidget {
+}
+
+class _SubSubcategoriesPage extends State<SubSubcategoriesPage> {
   final Subcategory subcategory;
 
-  SubSubcategoriesPage({required Key key, required this.subcategory}) : super(key: key);
+  _SubSubcategoriesPage({required Key key, required this.subcategory});
 
   @override
   Widget build(BuildContext context) {
@@ -546,22 +559,7 @@ class SubSubcategoriesPage extends StatelessWidget {
                 height: 30
             ),
             Padding(
-              padding: const EdgeInsets.symmetric(vertical: 30, horizontal: 20),
-              child: Container(
-                decoration: BoxDecoration(
-                    borderRadius: BorderRadius.circular(20),
-                    color: Colors.grey[200]),
-                child: const TextField(
-                  decoration: InputDecoration(
-                    border: InputBorder.none,
-                    prefixIcon: Icon(Icons.search,color: Colors.black),
-                    hintText: 'What dou you want to cook today?',
-                  ),
-                ),
-              ),
-            ),
-            Padding(
-              padding: const EdgeInsets.all(20),
+              padding: const EdgeInsets.all(10),
               child: Container(
                 height: 50,
                 decoration: const BoxDecoration(
@@ -582,6 +580,21 @@ class SubSubcategoriesPage extends StatelessWidget {
                       style: const TextStyle(fontSize: 24, fontWeight: FontWeight.bold, backgroundColor: Color(0xFFF4D67C)),
                     ),
                   ],
+                ),
+              ),
+            ),
+            Padding(
+              padding: const EdgeInsets.symmetric(vertical: 30, horizontal: 20),
+              child: Container(
+                decoration: BoxDecoration(
+                    borderRadius: BorderRadius.circular(20),
+                    color: Colors.grey[200]),
+                child: const TextField(
+                  decoration: InputDecoration(
+                    border: InputBorder.none,
+                    prefixIcon: Icon(Icons.search,color: Colors.black),
+                    hintText: 'What dou you want to cook today?',
+                  ),
                 ),
               ),
             ),
