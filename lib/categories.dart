@@ -5,126 +5,126 @@ class CategoriesPage extends StatelessWidget {
     Category(
       id: 1,
       name: 'Mexican Recipes',
-      image: 'assets/mexican.png',
+      image: 'assets/categories/mexican.png',
       subcategories: [
         Subcategory(
           id: 1,
           name: 'Subcategory 1',
-          image: 'assets/mexican.png',
+          image: 'assets/categories/mexican.png',
           subsubcategories: [
             SubSubcategory(
               id: 4,
               name: 'Subcategory 4',
-              image: 'assets/turkish.png',
+              image: 'assets/categories/turkish.png',
             )
           ],
         ),
         Subcategory(
           id: 2,
           name: 'Subcategory 2',
-          image: 'assets/mexican.png',
+          image: 'assets/categories/mexican.png',
           subsubcategories: [
             SubSubcategory(
               id: 4,
               name: 'Subcategory 4',
-              image: 'assets/turkish.png',
+              image: 'assets/categories/turkish.png',
             )
           ],        ),      ],
     ),
     Category(
       id: 2,
       name: 'Turkish Recipes',
-      image: 'assets/turkish.png',
+      image: 'assets/categories/turkish.png',
       subcategories: [
         Subcategory(
           id: 4,
           name: 'Pita',
-          image: 'assets/pide.png',
+          image: 'assets/categories/pide.png',
           subsubcategories: [
             SubSubcategory(
               id: 4,
               name: 'Subcategory 4',
-              image: 'assets/turkish.png',
+              image: 'assets/categories/turkish.png',
             ),
             SubSubcategory(
               id: 4,
               name: 'Subcategory 4',
-              image: 'assets/turkish.png',
+              image: 'assets/categories/turkish.png',
             )
           ],
         ),
         Subcategory(
           id: 4,
           name: 'Soup',
-          image: 'assets/çorba.png',
+          image: 'assets/categories/çorba.png',
           subsubcategories: [
             SubSubcategory(
               id: 4,
               name: 'Lentil Soup',
-              image: 'assets/LentilSoup.png',
+              image: 'assets/categories/LentilSoup.png',
             ),
             SubSubcategory(
               id: 4,
               name: 'Tomato Soup',
-              image: 'assets/tomatoSoup.png',
+              image: 'assets/categories/tomatoSoup.png',
             ),
             SubSubcategory(
               id: 4,
               name: 'Chicken Borth Soup',
-              image: 'assets/ChickenBorthSoup.png',
+              image: 'assets/categories/ChickenBorthSoup.png',
             ),
             SubSubcategory(
               id: 4,
               name: 'Vermiceli Soup',
-              image: 'assets/vermicelli.png',
+              image: 'assets/categories/vermicelli.png',
             )
           ],
         ),
         Subcategory(
           id: 4,
           name: 'Salata',
-          image: 'assets/salata.png',
+          image: 'assets/categories/salata.png',
           subsubcategories: [
             SubSubcategory(
               id: 4,
               name: 'Subcategory 4',
-              image: 'assets/turkish.png',
+              image: 'assets/categories/turkish.png',
             )
           ],
         ),
         Subcategory(
           id: 4,
           name: 'Kebab',
-          image: 'assets/kebab.png',
+          image: 'assets/categories/kebab.png',
           subsubcategories: [
             SubSubcategory(
               id: 4,
               name: 'Subcategory 4',
-              image: 'assets/turkish.png',
+              image: 'assets/categories/turkish.png',
             )
           ],
         ),
         Subcategory(
           id: 3,
           name: 'Rice',
-          image: 'assets/pilav.png',
+          image: 'assets/categories/pilav.png',
           subsubcategories: [
             SubSubcategory(
               id: 4,
               name: 'Subcategory 4',
-              image: 'assets/turkish.png',
+              image: 'assets/categories/turkish.png',
             )
           ],
         ),
         Subcategory(
           id: 4,
           name: 'Deserts',
-          image: 'assets/tatlı.png',
+          image: 'assets/categories/tatlı.png',
           subsubcategories: [
             SubSubcategory(
               id: 4,
               name: 'Subcategory 4',
-              image: 'assets/tatlı.png',
+              image: 'assets/categories/tatlı.png',
             )
           ],
         ),
@@ -133,29 +133,29 @@ class CategoriesPage extends StatelessWidget {
     Category(
       id: 3,
       name: 'Italian Recipes',
-      image: 'assets/italian.png',
+      image: 'assets/categories/italian.png',
       subcategories: [
         Subcategory(
           id: 5,
           name: 'Subcategory 3',
-          image: 'assets/italian.png',
+          image: 'assets/categories/italian.png',
           subsubcategories: [
             SubSubcategory(
               id: 4,
               name: 'Subcategory 4',
-              image: 'assets/turkish.png',
+              image: 'assets/categories/turkish.png',
             )
           ],
         ),
         Subcategory(
           id: 6,
           name: 'Subcategory 4',
-          image: 'assets/italian.png',
+          image: 'assets/categories/italian.png',
           subsubcategories: [
             SubSubcategory(
               id: 4,
               name: 'Subcategory 4',
-              image: 'assets/turkish.png',
+              image: 'assets/categories/turkish.png',
             )
           ],
         ),
@@ -164,29 +164,29 @@ class CategoriesPage extends StatelessWidget {
     Category(
       id: 4,
       name: 'French Recipes',
-      image: 'assets/french.png',
+      image: 'assets/categories/french.png',
       subcategories: [
         Subcategory(
           id: 7,
           name: 'Subcategory 3',
-          image: 'assets/french.png',
+          image: 'assets/categories/french.png',
           subsubcategories: [
             SubSubcategory(
               id: 4,
               name: 'Subcategory 4',
-              image: 'assets/turkish.png',
+              image: 'assets/categories/turkish.png',
             )
           ],
         ),
         Subcategory(
           id: 8,
           name: 'Subcategory 4',
-          image: 'assets/french.png',
+          image: 'assets/categories/french.png',
           subsubcategories: [
             SubSubcategory(
               id: 4,
               name: 'Subcategory 4',
-              image: 'assets/turkish.png',
+              image: 'assets/categories/turkish.png',
             )
           ],
         ),
@@ -195,29 +195,29 @@ class CategoriesPage extends StatelessWidget {
     Category(
       id: 5,
       name: 'Japanese Recipes',
-      image: 'assets/japanese.png',
+      image: 'assets/categories/japanese.png',
       subcategories: [
         Subcategory(
           id: 9,
           name: 'Subcategory 3',
-          image: 'assets/japanese.png',
+          image: 'assets/categories/japanese.png',
           subsubcategories: [
             SubSubcategory(
               id: 4,
               name: 'Subcategory 4',
-              image: 'assets/turkish.png',
+              image: 'assets/categories/turkish.png',
             )
           ],
         ),
         Subcategory(
           id: 10,
           name: 'Subcategory 4',
-          image: 'assets/japanese.png',
+          image: 'assets/categories/japanese.png',
           subsubcategories: [
             SubSubcategory(
               id: 4,
               name: 'Subcategory 4',
-              image: 'assets/turkish.png',
+              image: 'assets/categories/turkish.png',
             )
           ],
         ),
@@ -226,28 +226,28 @@ class CategoriesPage extends StatelessWidget {
     Category(
       id: 6,
       name: 'Spanish Recipes',
-      image: 'assets/spanish.png',
+      image: 'assets/categories/spanish.png',
       subcategories: [
         Subcategory(
           id: 11,
           name: 'Subcategory 3',
-          image: 'assets/spanish.png',
+          image: 'assets/categories/spanish.png',
           subsubcategories: [
             SubSubcategory(
               id: 4,
               name: 'Subcategory 4',
-              image: 'assets/turkish.png',
+              image: 'assets/categories/turkish.png',
             )],
         ),
         Subcategory(
           id: 12,
           name: 'Subcategory 4',
-          image: 'assets/spanish.png',
+          image: 'assets/categories/spanish.png',
           subsubcategories: [
             SubSubcategory(
               id: 4,
               name: 'Subcategory 4',
-              image: 'assets/turkish.png',
+              image: 'assets/categories/turkish.png',
             )],
         ),
       ],
