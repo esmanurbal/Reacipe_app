@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:recipe/HomeScreen.dart';
+import 'package:recipe/Ingredients.dart';
 import 'package:recipe/color.dart';
 import 'package:recipe/constant.dart';
 
@@ -9,7 +10,7 @@ class CategoriesPage extends StatefulWidget {
   _CategoriesPageState createState() => _CategoriesPageState();
 }
 class _CategoriesPageState extends State<CategoriesPage> {
-  final List<Category> categories = [
+  final List <Category> categories = [
     Category(
       id: 1,
       name: 'Mexican Recipes',
@@ -439,9 +440,9 @@ class _CategoriesPageState extends State<CategoriesPage> {
   }
 }
 
-<<<<<<< HEAD
-class SubcategoriesPage extends StatelessWidget {
-=======
+
+
+
 class SubCategoriesPage extends StatefulWidget{
   SubCategoriesPage({super.key, required this.category});
   final Category category;
@@ -450,7 +451,7 @@ class SubCategoriesPage extends StatefulWidget{
 }
 
 class _SubCategoriesPageState extends State<SubCategoriesPage> {
->>>>>>> 50dd73abc60cfa70c1ecf851118c69af94c1fbac
+
   final Category category;
 
   _SubCategoriesPageState({required Key key, required this.category});
@@ -646,8 +647,7 @@ class _SubSubcategoriesPage extends State<SubSubcategoriesPage> {
                         onTap: () {
                           Navigator.of(context).push(
                             MaterialPageRoute(
-                              builder: (context) => SubSubcategoriesPage( key: UniqueKey(),subcategory : subcategory),
-                            ),
+                              builder: (context) => IngredientsPage(subsubcategory: subsubcategory),                           ),
                           );
                         },
                       ),
