@@ -2,6 +2,8 @@ import 'package:flutter/material.dart';
 import 'package:recipe/HomeScreen.dart';
 import 'package:recipe/color.dart';
 import 'package:recipe/constant.dart';
+
+import 'Ingredients.dart';
 class CategoriesPage extends StatefulWidget {
   CategoriesPage({super.key});
   @override
@@ -633,13 +635,13 @@ class SubSubcategoriesPage extends StatelessWidget {
                             ),
                           ],
                         ),
-                        onTap: () {
-                          Navigator.of(context).push(
-                            MaterialPageRoute(
-                              builder: (context) => SubSubcategoriesPage( key: UniqueKey(),subcategory : subcategory),
-                            ),
-                          );
-                        },
+                          onTap: () {
+                            Navigator.of(context).push(
+                              MaterialPageRoute(
+                                builder: (context) => IngredientsPage(subsubcategory: subsubcategory),
+                              ),
+                            );
+                          }
                       ),
                     );
                   },
