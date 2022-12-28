@@ -9,7 +9,7 @@ class CategoriesPage extends StatelessWidget {
       subcategories: [
         Subcategory(
           id: 1,
-          name: 'Subcategory 1',
+          name: 'Subcategory',
           image: 'assets/categories/mexican.png',
           subsubcategories: [
             SubSubcategory(
