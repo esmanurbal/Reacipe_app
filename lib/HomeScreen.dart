@@ -282,16 +282,24 @@ class _HomeScreenState extends State<HomeScreen>{
               children:List.generate(
                 icons.length,
                     (index) => GestureDetector(
-                  onTap: () {
-                    setState(() {
-                      selectedPage = index;
-                    });
-                    Navigator.push(
-                      context,
-                      MaterialPageRoute(builder: (context) => CategoriesPage()),
-                    );
+                      onTap: () {
+                        setState(() {
+                          selectedPage = index;
+                        });
+                        if (selectedPage == 0) {
+                          Navigator.push(
+                            context,
+                            MaterialPageRoute(builder: (context) => HomeScreen()),
+                          );
+                        } else if (selectedPage == 1) {
+                          Navigator.push(
+                            context,
+                            MaterialPageRoute(builder: (context) => CategoriesPage()),
+                          );
+                        }
+                        // Add more else if clauses for the other screens
+                      },
 
-                  },
 
                   child: SizedBox(
                     height: 40,

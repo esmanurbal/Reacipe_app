@@ -383,17 +383,26 @@ class _CategoriesPageState extends State<CategoriesPage> {
             children:List.generate(
               icons.length,
                   (index) => GestureDetector(
-                onTap: () {
-                  setState(() {
-                    selectedPage = index;
-                  });
-                  Navigator.push(
-                    context,
-                    MaterialPageRoute(builder: (context) => const HomeScreen()),
-                  );
-                },
+                    onTap: () {
+                      setState(() {
+                        selectedPage = index;
+                      });
+                      if (selectedPage == 0) {
+                        Navigator.push(
+                          context,
+                          MaterialPageRoute(builder: (context) => HomeScreen()),
+                        );
+                      } else if (selectedPage == 1) {
+                        Navigator.push(
+                          context,
+                          MaterialPageRoute(builder: (context) => CategoriesPage()),
+                        );
+                      }
+                      // Add more else if clauses for the other screens
+                    },
 
-                child: SizedBox(
+
+                    child: SizedBox(
                   height: 40,
                   width: 30,
                   child: Column(
