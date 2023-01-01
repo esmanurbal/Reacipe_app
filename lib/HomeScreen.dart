@@ -1,9 +1,9 @@
 import 'package:flutter/material.dart';
-import './categories.dart';
 import 'package:recipe/categories.dart';
 import 'constant.dart';
 import 'users.dart';
 import 'color.dart';
+import 'package:recipe/NotificationScreen.dart';
 
 class HomeScreen extends StatefulWidget{
   const HomeScreen({Key? key}) : super(key: key);
@@ -11,21 +11,14 @@ class HomeScreen extends StatefulWidget{
   _HomeScreenState createState() => _HomeScreenState();
 }
 class _HomeScreenState extends State<HomeScreen>{
-  int selectedPage = 0;
-  List<IconData> icons = [
-    Icons.home_rounded,
-    Icons.bar_chart_rounded,
-    Icons.favorite_outline_rounded,
-    Icons.person_outline_rounded,
-  ];
   @override
   Widget build(BuildContext context){
     return Scaffold(
-        body: Container(
+        body:
+        Container(
           decoration: getTransitionalDecoration(),
           child: Column(
             children: [
-
               const SizedBox(height: 30,),
               Padding(
                 padding: const EdgeInsets.symmetric(horizontal: 20),
@@ -36,23 +29,25 @@ class _HomeScreenState extends State<HomeScreen>{
                       crossAxisAlignment: CrossAxisAlignment.start,
                       children: [
                         Container(
-
-                          // Add padding to the top of the container
                           child:Column(children: [
+
                             Padding(padding: const EdgeInsets.only(right: 50),
                               child:
                               Text.rich(
                                 TextSpan(
                                   children: [
-                                    const TextSpan(text: "R", style: TextStyle(color: Color.fromARGB(200, 87,4,14))),
-                                    const TextSpan(text: "E", style: TextStyle(color: Color.fromARGB(200,87,4,14))),
-                                    const TextSpan(text: "C", style: TextStyle(color: Color.fromARGB(200,87,4,14))),
+                                    const TextSpan(text: "R", style: TextStyle(fontWeight: FontWeight.w600, fontSize: 25,color: Color.fromARGB(200, 154,6,24))),
+                                    const TextSpan(text: "E", style: TextStyle(fontWeight: FontWeight.w600, fontSize: 25,color: Color.fromARGB(200,154,6,24))),
+                                    const TextSpan(text: "C", style: TextStyle(fontWeight: FontWeight.w600, fontSize: 25,color: Color.fromARGB(200,235,23,49))),
                                     TextSpan(children:[WidgetSpan(child: Image.asset(recipeGif,height:50,width:50,)),]),
-                                    const TextSpan(text: "P", style: TextStyle(color: Color.fromARGB(200,87,4,14))),
-                                    const TextSpan(text: "E", style: TextStyle(color: Color.fromARGB(200,87,4,14))),
+                                    const TextSpan(text: "P", style: TextStyle(fontWeight: FontWeight.w600, fontSize: 25,color: Color.fromARGB(200,87,4,14))),
+                                    const TextSpan(text: "E", style: TextStyle(fontWeight: FontWeight.w600, fontSize: 25,color: Color.fromARGB(200,87,4,14))),
                                   ],
                                 ),
-                              ),),
+
+                              ),
+
+                            ),
                             const SizedBox(width: 10,height: 30,),
 
                             Text(
@@ -75,28 +70,43 @@ class _HomeScreenState extends State<HomeScreen>{
                     const Spacer(),
                     Stack(
                         children: [
-                          Container(
-                            height: 80,
-                            width: 80,
-                            decoration: BoxDecoration(
+                          Padding(
+                            padding: const EdgeInsets.only(top:60,left:10),
+                            child: Container(
+                              height: 80,
+                              width: 80,
+                              decoration: BoxDecoration(
                                 shape: BoxShape.circle,
                                 image: DecorationImage(
-                                    image: AssetImage(users[2].image),
-                                    fit: BoxFit.cover)),
-                          ),
-                          Positioned(
-                            right: 4,
-                            top: 4,
-                            child: Container(
-                              height: 8,
-                              width: 8,
-                              decoration: const BoxDecoration(
-                                  shape: BoxShape.circle, color: green),
+                                  image: AssetImage(users[2].image),
+                                  fit: BoxFit.cover,
+                                  alignment: Alignment.bottomCenter,
+                                ),
+                              ),
+
                             ),
                           ),
-                        ]
-                    ),
+                           Padding(
+                             padding: const EdgeInsets.symmetric(horizontal: 40,vertical: 20),
+                            child: Align(
+                              alignment: Alignment.topRight,
+                              child: GestureDetector(
+                                onTap: () {
+                                  // Navigate to the notification.dart field
+                                  Navigator.of(context).push(
+                                      MaterialPageRoute(
+                                      builder: (context) => NotificationScreen()),);
+                                },
+                                child: const Icon(
+                                  Icons.notifications_none,
+                                  size: 30,
+                                ),
 
+
+                            ),
+                          )
+                           )]
+                    ),
                   ],
                 ),
               ),
@@ -108,7 +118,7 @@ class _HomeScreenState extends State<HomeScreen>{
                 child: Container(
                   decoration: BoxDecoration(
                       borderRadius: BorderRadius.circular(20),
-                      color: grey.shade200),
+                      color: Colors.grey.shade200),
                   child: TextField(
                     decoration: InputDecoration(
                         border: InputBorder.none,
@@ -261,82 +271,19 @@ class _HomeScreenState extends State<HomeScreen>{
                               ),
                             ),
                           ),
-
-
                         ]),
                       ],
                     ),
                   )
-
               ),
             ],
+
+
+
           ),
 
         ),
-      bottomNavigationBar: Container(
-        height: 50,
-        color: const Color.fromARGB(100, 255, 236, 96),
-        child: Row(
-          mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-          children: List.generate(
-            icons.length,
-                (index) => GestureDetector(
-              onTap: () {
-                setState(() {
-                  selectedPage = index;
-                });
-                if (selectedPage == 0) {
-                  Navigator.push(
-                    context,
-                    MaterialPageRoute(builder: (context) => HomeScreen()),
 
-                  );
-                } else if (selectedPage == 1) {
-                  Navigator.push(
-                    context,
-                    MaterialPageRoute(builder: (context) => CategoriesPage()),
-                  );
-                } else if (selectedPage == 2) {
-                  Navigator.push(
-                    context,
-                    MaterialPageRoute(builder: (context) => HomeScreen()),
-                  );
-                } else if (selectedPage == 3) {
-                  Navigator.push(
-                    context,
-                    MaterialPageRoute(builder: (context) => const HomeScreen()),
-                  );
-                }
-              },
-              child: SizedBox(
-                height: 40,
-                width: 30,
-                child: Column(
-                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                  crossAxisAlignment: CrossAxisAlignment.center,
-                  children: [
-                    Icon(
-                      icons[index],
-                      color: index == selectedPage ? Colors.orange : Colors.black,
-                      size: 35,
-                    ),
-                    index == selectedPage
-                        ? Container(
-                      height: 3,
-                      width: 30,
-                      decoration: BoxDecoration(
-                        borderRadius: BorderRadius.circular(50.0),
-                        color: Colors.orange,
-                      ),
-                    )
-                        : Container(),
-                  ],
-                ),
-              ),
-            ),
-          ),
-        ),
-      ),
 
     );
   }
