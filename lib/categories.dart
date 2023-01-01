@@ -2,9 +2,13 @@ import 'package:flutter/material.dart';
 import 'package:recipe/HomeScreen.dart';
 import 'package:recipe/color.dart';
 import 'package:recipe/constant.dart';
+import './meals_data.dart';
+import 'package:flutter/widgets.dart';
 
-import 'Ingredients.dart';
+
+import 'IngredientsScreen.dart';
 class CategoriesPage extends StatefulWidget {
+
   CategoriesPage({super.key});
   @override
   _CategoriesPageState createState() => _CategoriesPageState();
@@ -21,12 +25,28 @@ class _CategoriesPageState extends State<CategoriesPage> {
         Subcategory(
           id: 1,
           name: 'Subcategory',
-          image: 'assets/categories/mexican.png',
+          image: 'assets/categories/pide.png',
           subsubcategories: [
             SubSubcategory(
               id: 4,
               name: 'Subcategory 4',
+
               image: 'assets/categories/turkish.png',
+              subsubsubcategories: [
+                SubSubSubcategory(
+                  id:1,
+                  name: '',
+                  yemekTarifleri : ['4 Tomatoes',
+                    '1 Tablespoon of Olive Oil',
+                    '1 Onion',
+                    '250g Spaghetti',
+                    'Spices',
+                    'Cheese (optional)' ],
+                  image:'assets/categories/pide.png',
+
+                )
+
+              ]
             )
           ],
         ),
@@ -39,6 +59,18 @@ class _CategoriesPageState extends State<CategoriesPage> {
               id: 4,
               name: 'Subcategory 4',
               image: 'assets/categories/turkish.png',
+              subsubsubcategories: [
+                SubSubSubcategory(
+                    id:4,
+                  name: 'selcuk',
+                  yemekTarifleri :['4 Tomatoes',
+                    '1 Tablespoon of Olive Oil',
+                    '1 Onion',
+                    '250g Spaghetti',
+                    'Spices',
+                    'Cheese (optional)' ],
+                  image:'assets/categories/pide.png',)
+              ]
             )
           ],        ),      ],
     ),
@@ -56,11 +88,41 @@ class _CategoriesPageState extends State<CategoriesPage> {
               id: 4,
               name: 'Subcategory 4',
               image: 'assets/categories/turkish.png',
+                subsubsubcategories: [
+                  SubSubSubcategory(
+                    id:4,
+                    name: 'selcuk',
+                    yemekTarifleri :['4 Tomatoes',
+                      '1 Tablespoon of Olive Oil',
+                      '1 Onion',
+                      '250g Spaghetti',
+                      'Spices',
+                      'Cheese (optional)' ],
+                    image:'assets/categories/pide.png',
+
+                  )
+
+                ]
             ),
             SubSubcategory(
               id: 4,
               name: 'Subcategory 4',
               image: 'assets/categories/turkish.png',
+                subsubsubcategories: [
+                  SubSubSubcategory(
+                    id:4,
+                    name: 'selcuk',
+                    yemekTarifleri : ['4 Tomatoes',
+                      '1 Tablespoon of Olive Oil',
+                      '1 Onion',
+                      '250g Spaghetti',
+                      'Spices',
+                      'Cheese (optional)' ],
+                    image:'assets/categories/turkish.png',
+
+                  )
+
+                ]
             )
           ],
         ),
@@ -73,21 +135,81 @@ class _CategoriesPageState extends State<CategoriesPage> {
               id: 4,
               name: 'Lentil Soup',
               image: 'assets/categories/LentilSoup.png',
+                subsubsubcategories: [
+                  SubSubSubcategory(
+                    id:4,
+                    name: 'selcuk',
+                    yemekTarifleri : ['4 Tomatoes',
+                      '1 Tablespoon of Olive Oil',
+                      '1 Onion',
+                      '250g Spaghetti',
+                      'Spices',
+                      'Cheese (optional)' ],
+                    image:'assets/categories/turkish.png',
+
+                  )
+
+                ]
             ),
             SubSubcategory(
               id: 4,
               name: 'Tomato Soup',
               image: 'assets/categories/tomatoSoup.png',
+                subsubsubcategories: [
+                  SubSubSubcategory(
+                    id:3,
+                    name: 'selcuk',
+                    yemekTarifleri : ['4 Tomatoes',
+                      '1 Tablespoon of Olive Oil',
+                      '1 Onion',
+                      '250g Spaghetti',
+                      'Spices',
+                      'Cheese (optional)' ],
+                    image:'assets/categories/turkish.png',
+
+                  )
+
+                ]
             ),
             SubSubcategory(
               id: 4,
               name: 'Chicken Borth Soup',
               image: 'assets/categories/ChickenBorthSoup.png',
+                subsubsubcategories: [
+                  SubSubSubcategory(
+                    id:4,
+                    name: 'selcuk',
+                    yemekTarifleri :['4 Tomatoes',
+                      '1 Tablespoon of Olive Oil',
+                      '1 Onion',
+                      '250g Spaghetti',
+                      'Spices',
+                      'Cheese (optional)' ],
+                    image:'assets/categories/turkish.png',
+
+                  )
+
+                ]
             ),
             SubSubcategory(
               id: 4,
               name: 'Vermiceli Soup',
               image: 'assets/categories/vermicelli.png',
+                subsubsubcategories: [
+                  SubSubSubcategory(
+                    id:4,
+                    name: 'selcuk',
+                    yemekTarifleri : ['4 Tomatoes',
+                      '1 Tablespoon of Olive Oil',
+                      '1 Onion',
+                      '250g Spaghetti',
+                      'Spices',
+                      'Cheese (optional)' ],
+                    image:'assets/categories/turkish.png',
+
+                  )
+
+                ]
             )
           ],
         ),
@@ -98,8 +220,23 @@ class _CategoriesPageState extends State<CategoriesPage> {
           subsubcategories: [
             SubSubcategory(
               id: 4,
-              name: 'Subcategory 4',
-              image: 'assets/categories/turkish.png',
+              name: 'Salata',
+              image: 'assets/categories/salata.png',
+                subsubsubcategories: [
+                  SubSubSubcategory(
+                    id:4,
+                    name: 'selcuk',
+                    yemekTarifleri : ['4 Tomatoes',
+                      '1 Tablespoon of Olive Oil',
+                      '1 Onion',
+                      '250g Spaghetti',
+                      'Spices',
+                      'Cheese (optional)' ],
+                    image:'assets/categories/turkish.png',
+
+                  )
+
+                ]
             )
           ],
         ),
@@ -112,6 +249,21 @@ class _CategoriesPageState extends State<CategoriesPage> {
               id: 4,
               name: 'Subcategory 4',
               image: 'assets/categories/turkish.png',
+                subsubsubcategories: [
+                  SubSubSubcategory(
+                    id:4,
+                    name: 'selcuk',
+                    yemekTarifleri : ['4 Tomatoes',
+                      '1 Tablespoon of Olive Oil',
+                      '1 Onion',
+                      '250g Spaghetti',
+                      'Spices',
+                      'Cheese (optional)' ],
+                    image:'assets/categories/turkish.png',
+
+                  )
+
+                ]
             )
           ],
         ),
@@ -124,6 +276,21 @@ class _CategoriesPageState extends State<CategoriesPage> {
               id: 4,
               name: 'Subcategory 4',
               image: 'assets/categories/turkish.png',
+                subsubsubcategories: [
+                  SubSubSubcategory(
+                    id:4,
+                    name: 'selcuk',
+                    yemekTarifleri :['4 Tomatoes',
+                      '1 Tablespoon of Olive Oil',
+                      '1 Onion',
+                      '250g Spaghetti',
+                      'Spices',
+                      'Cheese (optional)' ],
+                    image:'assets/categories/turkish.png',
+
+                  )
+
+                ]
             )
           ],
         ),
@@ -136,6 +303,21 @@ class _CategoriesPageState extends State<CategoriesPage> {
               id: 4,
               name: 'Subcategory 4',
               image: 'assets/categories/tatlı.png',
+                subsubsubcategories: [
+                  SubSubSubcategory(
+                    id:4,
+                    name: 'selcuk',
+                    yemekTarifleri :['4 Tomatoes',
+                      '1 Tablespoon of Olive Oil',
+                      '1 Onion',
+                      '250g Spaghetti',
+                      'Spices',
+                      'Cheese (optional)' ],
+                    image:'assets/categories/turkish.png',
+
+                  )
+
+                ]
             )
           ],
         ),
@@ -155,6 +337,21 @@ class _CategoriesPageState extends State<CategoriesPage> {
               id: 4,
               name: 'Subcategory 4',
               image: 'assets/categories/turkish.png',
+                subsubsubcategories: [
+                  SubSubSubcategory(
+                    id:4,
+                    name: 'selcuk',
+                    yemekTarifleri :['4 Tomatoes',
+                      '1 Tablespoon of Olive Oil',
+                      '1 Onion',
+                      '250g Spaghetti',
+                      'Spices',
+                      'Cheese (optional)' ],
+                    image:'assets/categories/turkish.png',
+
+                  )
+
+                ]
             )
           ],
         ),
@@ -167,6 +364,21 @@ class _CategoriesPageState extends State<CategoriesPage> {
               id: 4,
               name: 'Subcategory 4',
               image: 'assets/categories/turkish.png',
+                subsubsubcategories: [
+                  SubSubSubcategory(
+                    id:4,
+                    name: 'selcuk',
+                    yemekTarifleri : ['4 Tomatoes',
+                      '1 Tablespoon of Olive Oil',
+                      '1 Onion',
+                      '250g Spaghetti',
+                      'Spices',
+                      'Cheese (optional)' ],
+                    image:'assets/categories/turkish.png',
+
+                  )
+
+                ]
             )
           ],
         ),
@@ -186,6 +398,21 @@ class _CategoriesPageState extends State<CategoriesPage> {
               id: 4,
               name: 'Subcategory 4',
               image: 'assets/categories/turkish.png',
+                subsubsubcategories: [
+                  SubSubSubcategory(
+                    id:4,
+                    name: 'selcuk',
+                    yemekTarifleri : ['4 Tomatoes',
+                      '1 Tablespoon of Olive Oil',
+                      '1 Onion',
+                      '250g Spaghetti',
+                      'Spices',
+                      'Cheese (optional)' ],
+                    image:'assets/categories/turkish.png',
+
+                  )
+
+                ]
             )
           ],
         ),
@@ -198,6 +425,21 @@ class _CategoriesPageState extends State<CategoriesPage> {
               id: 4,
               name: 'Subcategory 4',
               image: 'assets/categories/turkish.png',
+                subsubsubcategories: [
+                  SubSubSubcategory(
+                    id:4,
+                    name: 'selcuk',
+                    yemekTarifleri : ['4 Tomatoes',
+                      '1 Tablespoon of Olive Oil',
+                      '1 Onion',
+                      '250g Spaghetti',
+                      'Spices',
+                      'Cheese (optional)' ],
+                    image:'assets/categories/turkish.png',
+
+                  )
+
+                ]
             )
           ],
         ),
@@ -217,6 +459,21 @@ class _CategoriesPageState extends State<CategoriesPage> {
               id: 4,
               name: 'Subcategory 4',
               image: 'assets/categories/turkish.png',
+                subsubsubcategories: [
+                  SubSubSubcategory(
+                    id:4,
+                    name: 'selcuk',
+                    yemekTarifleri : ['4 Tomatoes',
+                      '1 Tablespoon of Olive Oil',
+                      '1 Onion',
+                      '250g Spaghetti',
+                      'Spices',
+                      'Cheese (optional)' ],
+                    image:'assets/categories/turkish.png',
+
+                  )
+
+                ]
             )
           ],
         ),
@@ -229,6 +486,21 @@ class _CategoriesPageState extends State<CategoriesPage> {
               id: 4,
               name: 'Subcategory 4',
               image: 'assets/categories/turkish.png',
+                subsubsubcategories: [
+                  SubSubSubcategory(
+                    id:4,
+                    name: 'selcuk',
+                    yemekTarifleri : ['4 Tomatoes',
+                      '1 Tablespoon of Olive Oil',
+                      '1 Onion',
+                      '250g Spaghetti',
+                      'Spices',
+                      'Cheese (optional)' ],
+                    image:'assets/categories/turkish.png',
+
+                  )
+
+                ]
             )
           ],
         ),
@@ -248,6 +520,21 @@ class _CategoriesPageState extends State<CategoriesPage> {
               id: 4,
               name: 'Subcategory 4',
               image: 'assets/categories/turkish.png',
+                subsubsubcategories: [
+                  SubSubSubcategory(
+                    id:4,
+                    name: 'selcuk',
+                    yemekTarifleri :['4 Tomatoes',
+                      '1 Tablespoon of Olive Oil',
+                      '1 Onion',
+                      '250g Spaghetti',
+                      'Spices',
+                      'Cheese (optional)' ],
+                    image:'assets/categories/turkish.png',
+
+                  )
+
+                ]
             )],
         ),
         Subcategory(
@@ -259,6 +546,21 @@ class _CategoriesPageState extends State<CategoriesPage> {
               id: 4,
               name: 'Subcategory 4',
               image: 'assets/categories/turkish.png',
+                subsubsubcategories: [
+                  SubSubSubcategory(
+                    id:4,
+                    name: 'selcuk',
+                    yemekTarifleri : ['4 Tomatoes',
+                      '1 Tablespoon of Olive Oil',
+                      '1 Onion',
+                      '250g Spaghetti',
+                      'Spices',
+                      'Cheese (optional)' ],
+                    image:'assets/categories/turkish.png',
+
+                  )
+
+                ]
             )],
         ),
       ],
@@ -278,7 +580,9 @@ class _CategoriesPageState extends State<CategoriesPage> {
 
   @override
   Widget build(BuildContext context) {
+
     return Scaffold(
+
       body: Container(
         decoration: getTransitionalDecoration(),
         padding: const EdgeInsets.only(top: 10),
@@ -302,7 +606,6 @@ class _CategoriesPageState extends State<CategoriesPage> {
               ),),
             const SizedBox(
                 height: 30),
-
             Padding(
               padding: const EdgeInsets.symmetric(vertical: 30, horizontal: 20),
               child: Container(
@@ -352,7 +655,7 @@ class _CategoriesPageState extends State<CategoriesPage> {
                             Image.asset(category.image),
                             Padding(
                               padding: const EdgeInsets.symmetric(vertical: 0),
-                              child: Text(category.name, style: const TextStyle(backgroundColor: Color(0xFFFF4D67C)),),
+                             child: Text(category.name, style: const TextStyle(backgroundColor: Color(0xFFFF4D67C)),),
                             ),
                           ],
                         ),
@@ -474,10 +777,10 @@ class SubcategoriesPage extends StatelessWidget {
             ),
             Padding(
               padding: EdgeInsets.all(20),
-              child: Text(
-                category.name,
-                style: TextStyle(fontSize: 20, fontWeight: FontWeight.bold),
-              ),
+               child: Text(
+                 category.name,
+                 style: TextStyle(fontSize: 20, fontWeight: FontWeight.bold),
+               ),
             ),
             Expanded(
               child: Padding(
@@ -626,17 +929,315 @@ class SubSubcategoriesPage extends StatelessWidget {
                             ),
                           ],
                         ),
-                          onTap: () {
-                            Navigator.of(context).push(
-                              MaterialPageRoute(
-                                builder: (context) => IngredientsPage(subsubcategory: subsubcategory),
-                              ),
-                            );
-                          }
+
+                        onTap: () {
+                          Navigator.of(context).push(
+                            MaterialPageRoute(
+                              builder: (context) => SubSubSubcategoriesPage( key: UniqueKey(),subsubcategory : subsubcategory),
+                            ),
+                          );
+                        },
+
+                         // onTap: () {
+                         //    Navigator.of(context).push(
+                         //      MaterialPageRoute(
+                         //        builder: (context) => IngredientsScreen(: meal_data),
+                         //      ),
+                         //    );
+                         //  }
                       ),
                     );
                   },
                 ),
+              ),
+            ),
+          ],
+        ),
+      ),
+    );
+  }
+}
+class SubSubSubcategoriesPage extends StatelessWidget {
+  final SubSubcategory subsubcategory;
+  bool _showMalzemeListesi = false;
+  bool _showYemekTarifi = false;
+  SubSubSubcategoriesPage({required Key key,required this.subsubcategory}) : super(key: key);
+
+  @override
+  Widget build(BuildContext context) {
+
+    return Scaffold(
+
+      appBar: AppBar(
+        backgroundColor: Color(0xFFFF4D77D),
+
+        actions: [
+        IconButton(
+          icon: Icon(Icons.notifications),
+          onPressed: () {
+            // Zil iconu tıklandığında çalıştırılacak kod bloğu
+          },
+        ),
+    IconButton(
+    icon: Icon(Icons.restaurant),
+    onPressed: () {
+    }
+    ),
+
+      ],
+        title: Text("Yemek Tarifleri"),
+      ),
+
+      body: Container(
+        margin: EdgeInsets.all(4.0),
+        decoration: getTransitionalDecoration(),
+        child: Column(
+          crossAxisAlignment: CrossAxisAlignment.start,
+          children: [
+            const SizedBox(
+                height: 5.0
+            ),
+            // Padding(
+            //   padding: const EdgeInsets.symmetric(vertical: 30, horizontal: 10),
+            //   child: Container(
+            //     decoration: BoxDecoration(
+            //         borderRadius: BorderRadius.circular(20),
+            //         color: Colors.grey[200]),
+            //     child: const TextField(
+            //       decoration: InputDecoration(
+            //         border: InputBorder.none,
+            //         prefixIcon: Icon(Icons.search,color: Colors.black),
+            //         hintText: ' Yemek Ara',
+            //       ),
+            //     ),
+            //   ),
+            // ),
+
+            Row(
+
+              //mainAxisSize: MainAxisSize.min,
+              mainAxisAlignment: MainAxisAlignment.spaceBetween,
+
+              children: [
+                Expanded(
+                  //child: Image.asset("resim.jpg"),
+                  child:Image.asset(subsubcategory.image),
+                ),
+                SizedBox(height: 1),
+                Container(
+
+                  decoration: BoxDecoration(
+                    color: Color(0xFFF4D67C),
+                    borderRadius: BorderRadius.circular(20.0),
+                  ),
+                  child: Column(
+                    mainAxisSize: MainAxisSize.min,
+                    children: [
+                      Container(
+                        margin: EdgeInsets.all(8.0),
+
+                        padding: EdgeInsets.all(8.0),
+                        decoration: BoxDecoration(
+                          color: Colors.lightBlue,
+                          borderRadius: BorderRadius.circular(10.0),
+                        ),
+                        child: Text(
+                          "300 Kcal",
+                          style: TextStyle(
+                            color: Colors.white,
+                            fontWeight: FontWeight.bold,
+                          ),
+                        ),
+                      ),
+
+
+                      Container(
+
+                        margin: EdgeInsets.all(4.0),
+
+                        padding: EdgeInsets.all(8.0),
+                        decoration: BoxDecoration(
+                          color: Colors.lightGreen,
+                          borderRadius: BorderRadius.circular(10.0),
+                        ),
+                        child: Text(
+                          "45 dk      ",
+                          style: TextStyle(
+                            color: Colors.white,
+                            fontWeight: FontWeight.bold,
+                          ),
+                        ),
+                      ),
+                      Container(
+                        padding: EdgeInsets.all(8.0),
+                        margin: EdgeInsets.all(8.0),
+                        decoration: BoxDecoration(
+                          color: Colors.black12,
+                          borderRadius: BorderRadius.circular(10.0),
+                        ),
+                        child: Text(
+                          "4 Kişilik ",
+                          style: TextStyle(
+                            color: Colors.white,
+                            fontWeight: FontWeight.bold,
+                          ),
+                        ),
+                      ),
+                    ],
+                  ),
+                ),
+              ],
+            ),
+
+
+
+            Padding(
+              padding: const EdgeInsets.all(20),
+              child: Container(
+                height: 40,
+                decoration: const BoxDecoration(
+                  color: Color(0xFFFF4D77D), // set the color of the container
+                  borderRadius: BorderRadius.all(Radius.circular(10)), // set the border radius
+                ),
+
+
+                child: Row(
+                  mainAxisAlignment: MainAxisAlignment.center,
+
+                  children: [
+
+                    Text(
+                      subsubcategory.name,
+
+                      style: const TextStyle(fontSize: 20, fontWeight: FontWeight.bold,
+                          letterSpacing: 3.0, backgroundColor: Color(0xFFF4D67C)),
+
+                    ),
+                    SizedBox(width: 10),
+
+                      Icon(Icons.favorite),
+                    SizedBox(width: 20),
+                    Icon(Icons.content_paste),
+
+
+
+                  ],
+                ),
+              ),
+            ),
+            SizedBox(width: 10),
+            Card(
+
+              color: Color(0xFFF4D67C),
+              child: SingleChildScrollView(
+                child: Column(
+                  children: [
+                    Text("Yemek Tarifi"),
+                    Padding(
+                      padding: const EdgeInsets.all(8.0),
+                      child: Text(
+                          "Kıymalı lahana sarması yapmaya lahanaları haşlamakla başlayalım  "
+                              "Lahana sarması iç harcı nasıl hazırlanır?  yemeklik doğranmış soğan, yıkanmış pirinç, kıyma , domates ve biber salçası, tuz, karabiber, pulbiber, pilavlık bulgur, zeytinyağı ve suyu uygun bir kapta iyice karıştıralım "
+                              "Tencereniz dibine bir miktar lahana serdikten sonra sarmaları güzelce sıralayalım. Sarmaların üzeri iki üç parçaya kestiğimiz sarımsağı yerleştirelim.."
+                      ),
+                    ),
+                  ],
+                ),
+              ),
+            ),
+
+
+            Expanded(
+
+child: Scrollbar(
+
+
+              child: Padding(
+                padding: const EdgeInsets.symmetric(horizontal: 20.0),  // add 20.0 pixels of padding to the left and right sides
+                child: GridView.builder(
+                  itemCount: subsubcategory.subsubsubcategories.length,
+
+                  gridDelegate: const SliverGridDelegateWithFixedCrossAxisCount(
+                    childAspectRatio: 10.0 / 10.0,
+                    crossAxisCount: 2,
+                    mainAxisSpacing: 15.0,
+                    crossAxisSpacing: 15.0,
+                  ),
+                  itemBuilder: (context, index) {
+                    SubSubSubcategory subsubsubcategory = subsubcategory.subsubsubcategories[index];
+
+                   return Card(
+
+                      color: const Color(0xFFF4D67C),
+
+                      elevation: 4.0,
+                      shape: RoundedRectangleBorder(
+                        borderRadius: BorderRadius.circular(10.0),
+                      ),
+
+
+                      child: ListTile(
+
+                        contentPadding: EdgeInsets.symmetric(horizontal: 30),
+                        title: Column(
+                          mainAxisSize: MainAxisSize.min,
+
+                         // mainAxisAlignment: MainAxisAlignment.center,
+                          children: <Widget>[
+                            Row(
+                             mainAxisAlignment: MainAxisAlignment.end,
+                              children: const <Widget>[
+                                // Icon(
+                                //   Icons.star,
+                                //   color: Colors.yellow,
+                                // ),
+
+                              ],
+                            ),
+                            //Image.asset(subsubsubcategory.image),
+                            Expanded(
+                              child: Container(
+                                // Kutu çerçevesi
+                                decoration: BoxDecoration(
+
+                                ),
+                                child: ListView.builder(
+                                  itemCount: subsubsubcategory.yemekTarifleri.length,
+                                  itemBuilder: (context, index) {
+                                    return Padding(
+                                      // Kutu içindeki elemanlar arası boşluk
+                                      padding: const EdgeInsets.all(1.0),
+
+                                      child: Text(subsubsubcategory.yemekTarifleri[index]),
+                                    );
+                                  },
+                                ),
+                              ),
+                            ),
+
+                            // Padding(
+                            //
+                            //   padding: EdgeInsets.symmetric(vertical: 0),
+                            //
+                            //   child:
+                            //
+                            //   Text(subsubsubcategory.yemekTarifleri[index], textAlign: TextAlign.left,
+                            //   ),
+                            // ),
+                          ],
+                        ),
+                        // onTap: () {
+                        //    Navigator.of(context).push(
+                        //      MaterialPageRoute(
+                        //        builder: (context) => IngredientsScreen(: meal_data),
+                        //      ),
+                        //    );
+                        //  }
+                      ),
+                    );
+                  },
+                ),
+              ),
               ),
             ),
           ],
@@ -669,5 +1270,19 @@ class SubSubcategory {
   final String name;
   final String image;
 
-  SubSubcategory({required this.id, required this.name, required this.image});
+  final List<SubSubSubcategory> subsubsubcategories;
+ SubSubcategory({required this.id, required this.name, required this.image,required this.subsubsubcategories});
+
+  }
+
+
+class SubSubSubcategory {
+  final int id;
+  final String name;
+  final String image;
+  List<String> yemekTarifleri;
+
+  SubSubSubcategory({required this.id, required this.name,required this.yemekTarifleri, required this.image});
+
+
 }
