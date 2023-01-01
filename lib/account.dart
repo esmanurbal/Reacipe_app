@@ -1,18 +1,20 @@
 import 'package:flutter/material.dart';
+import 'package:flutter/widgets.dart';
 
-class User {
-  String name;
-  String surname;
-  String email;
+class UserWidget extends StatefulWidget {
+  User user;
 
-  User(this.name, this.surname, this.email);
+  UserWidget(this.user);
 
-  String getFullName() {
-    return '$name $surname';
-  }
-  var user = User('John', 'Doe', 'john@example.com');
-
+  @override
+  _UserWidgetState createState() => _UserWidgetState();
 }
 
-var user = User('John', 'Doe', 'john@example.com');
-print(user.getFullName());  // prints 'John Doe'
+class _UserWidgetState extends State<UserWidget> {
+  final double coverHeight
+  @override
+  Widget build(BuildContext context) {
+  return Scaffold();
+
+ }}
+

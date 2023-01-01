@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:recipe/account.dart';
 import 'package:recipe/categories.dart';
 import 'package:recipe/navigator.dart';
 import 'HomeScreen.dart';
@@ -18,7 +19,7 @@ class MyApp extends StatelessWidget {
       title: 'Flutter Demo',
       theme: ThemeData(),
       debugShowCheckedModeBanner: false,
-      home:Navigotor(),
+      home:UserWidget(),
 
     );
   }
