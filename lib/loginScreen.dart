@@ -1,18 +1,23 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
+import 'package:recipe/constant.dart';
 
 
 class LoginScrenn extends StatefulWidget {
 
   @override
   State<LoginScrenn> createState() => _LoginScrennState();
-}
 
+  TextEditingController nameController = TextEditingController();
+  TextEditingController passwordController = TextEditingController();
+
+}
 Widget buildEmail()  {
   return Column(
     crossAxisAlignment: CrossAxisAlignment.start,
     children: <Widget>[
-      Text(
+
+      const Text(
         'Email Adress',
         style: TextStyle(
             color: Colors.black,
@@ -21,13 +26,13 @@ Widget buildEmail()  {
 
         )
       ),
-      SizedBox(height: 5),
+      const SizedBox(height: 5),
       Container(
         alignment: Alignment.center,
         decoration: BoxDecoration(
           color: Colors.white,
           borderRadius: BorderRadius.circular(5),
-          boxShadow: [
+          boxShadow: const [
             BoxShadow(
               color: Colors.black26,
               blurRadius: 6,
@@ -36,7 +41,7 @@ Widget buildEmail()  {
           ]
         ),
         height: 60,
-        child: TextField(
+        child: const TextField(
           keyboardType: TextInputType.emailAddress,
           style: TextStyle(
             color: Colors.black87
@@ -60,6 +65,7 @@ Widget buildPassword()  {
   return Column(
     crossAxisAlignment: CrossAxisAlignment.start,
     children: <Widget>[
+      const SizedBox(width: 10,height: 70,),
       Text(
           'Password',
           style: TextStyle(
@@ -99,7 +105,54 @@ Widget buildPassword()  {
               )
           ),
         ),
-      )
+      ),
+      Row(
+        mainAxisAlignment: MainAxisAlignment.center,
+        children: <Widget>[
+          const Text('Forgot to'),
+          TextButton(
+            child: const Text(
+              'Password',
+              style: TextStyle(fontSize: 15),
+
+            ),
+            onPressed: () {
+              //signup screen
+            },
+          )
+        ],
+      ),
+      Container(
+          alignment: Alignment.bottomCenter,
+          height: 50,
+          padding: const EdgeInsets.fromLTRB(5, 0, 0, 10),
+          child: ElevatedButton(
+            child: const Text('Login'),
+            onPressed: () {
+              var nameController;
+
+              print(nameController.text);
+              var passwordController;
+              print(passwordController.text);
+            },
+          )
+      ),
+      Row(
+        mainAxisAlignment: MainAxisAlignment.center,
+        children: <Widget>[
+          const Text('Dont have an account yet?'),
+          const SizedBox(height: 55),
+          TextButton(
+              child:const Text(
+                'Sign in',
+                style: TextStyle(fontSize: 15),
+              ),
+              onPressed: () {}
+            //signup screen
+          )
+        ],
+
+      ),
     ],
   );
 }
@@ -119,7 +172,7 @@ class _LoginScrennState extends State<LoginScrenn> {
               Container(
                 height: double.infinity,
                 width: double.infinity,
-                decoration: BoxDecoration(
+                decoration: const BoxDecoration(
                     gradient: LinearGradient(
                         begin: Alignment.topLeft,
                         end: Alignment.topRight,
@@ -140,13 +193,23 @@ class _LoginScrennState extends State<LoginScrenn> {
                   child: Column(
                     mainAxisAlignment: MainAxisAlignment.center,
                     children: <Widget>[
-                      Text(
-                        'Recipe',
-                        style: TextStyle(
-                            color: Colors.white,
-                            fontSize: 40,
-                            fontWeight: FontWeight.bold
+                      const SizedBox(width: 10,height: 10,),
+                      Padding(padding: const EdgeInsets.only(right: 50),
+                        child:
+                        Text.rich(
+                          TextSpan(
+                            children: [
+                              const TextSpan(text: "R", style: TextStyle(fontWeight: FontWeight.w600, fontSize: 50,color: Color.fromARGB(200, 154,6,24))),
+                              const TextSpan(text: "E", style: TextStyle(fontWeight: FontWeight.w600, fontSize: 50,color: Color.fromARGB(200,154,6,24))),
+                              const TextSpan(text: "C", style: TextStyle(fontWeight: FontWeight.w600, fontSize: 50,color: Color.fromARGB(200,235,23,49))),
+                              TextSpan(children:[WidgetSpan(child: Image.asset(recipeGif,height:50,width:50,)),]),
+                              const TextSpan(text: "P", style: TextStyle(fontWeight: FontWeight.w600, fontSize: 50,color: Color.fromARGB(200,87,4,14))),
+                              const TextSpan(text: "E", style: TextStyle(fontWeight: FontWeight.w600, fontSize: 50,color: Color.fromARGB(200,87,4,14))),
+                            ],
+                          ),
+
                         ),
+
                       ),
                       SizedBox(height: 90),
                       buildEmail(),
@@ -163,9 +226,6 @@ class _LoginScrennState extends State<LoginScrenn> {
     );
   }
   }
-
-
-
 
 
 
