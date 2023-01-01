@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:recipe/categories.dart';
 import 'package:recipe/navigator.dart';
+import 'package:recipe/startScreen.dart';
 import 'HomeScreen.dart';
 import 'NotificationScreen.dart';
 
@@ -18,7 +19,7 @@ class MyApp extends StatelessWidget {
       title: 'Flutter Demo',
       theme: ThemeData(),
       debugShowCheckedModeBanner: false,
-      home:Navigotor(),
+      home: StartScreen(),
 
     );
   }

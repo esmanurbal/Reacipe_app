@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'HomeScreen.dart';
+import 'Navigator.dart';
 import 'package:recipe/constant.dart';
 
 void main() {
@@ -18,7 +18,7 @@ class _StartScreenState extends State<StartScreen> {
     Future.delayed(Duration(seconds: 5), () {
       Navigator.pushReplacement(
         context,
-        MaterialPageRoute(builder: (context) => HomeScreen()),
+        MaterialPageRoute(builder: (context) => Navigotor()),
       );
     });
   }
