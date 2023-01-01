@@ -12,7 +12,7 @@ class Navigotor extends StatefulWidget{
 class _NavigotorState extends State<Navigotor>{
   int _currentIndex =0;
   late final Category category;
-  List<Widget> listOption = <Widget>[HomeScreen(),CategoriesPage(),HomeScreen()];
+  List<Widget> listOption = <Widget>[HomeScreen(),CategoriesPage(),HomeScreen(),HomeScreen()];
   @override
   Widget build(BuildContext context){
     return Scaffold(
