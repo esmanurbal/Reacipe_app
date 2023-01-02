@@ -1,9 +1,9 @@
 import 'package:flutter/material.dart';
-import 'package:recipe/categories.dart';
-import 'constant.dart';
-import 'users.dart';
-import 'color.dart';
-import 'package:recipe/NotificationScreen.dart';
+import 'package:recipe/screens/NotificationScreen.dart';
+import 'package:recipe/components/constant.dart';
+import '../users.dart';
+import 'package:recipe/components/color.dart';
+
 
 class HomeScreen extends StatefulWidget{
   const HomeScreen({Key? key}) : super(key: key);

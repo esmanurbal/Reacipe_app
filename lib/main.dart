@@ -1,11 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:recipe/UserWidget.dart';
-import 'package:recipe/categories.dart';
-import 'package:recipe/loginScreen.dart';
-import 'package:recipe/navigator.dart';
-import 'package:recipe/startScreen.dart';
-import 'HomeScreen.dart';
-import 'NotificationScreen.dart';
+import 'package:recipe/screens/startScreen.dart';
 
 void main() {
   runApp(const MyApp());

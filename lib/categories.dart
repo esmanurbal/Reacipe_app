@@ -1,10 +1,9 @@
 import 'package:flutter/material.dart';
-import 'package:google_nav_bar/google_nav_bar.dart';
-import 'package:recipe/NotificationScreen.dart';
-import 'HomeScreen.dart';
-import 'Ingredients.dart';
-import 'color.dart';
-import 'constant.dart';
+import 'package:recipe/components/constant.dart';
+import 'package:recipe/screens/NotificationScreen.dart';
+import 'package:recipe/screens/Ingredients.dart';
+import 'package:recipe/components/color.dart';
+
 
 class CategoriesPage extends StatefulWidget {
   const CategoriesPage({super.key});

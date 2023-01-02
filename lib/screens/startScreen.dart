@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
-import 'Navigator.dart';
-import 'package:recipe/constant.dart';
+import 'package:recipe/components/constant.dart';
+import 'package:recipe/components/navigator.dart';
+
 
 void main() {
   runApp(StartScreen());

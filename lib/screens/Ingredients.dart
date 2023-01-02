@@ -1,6 +1,6 @@
 
 import 'package:flutter/material.dart';
-import 'categories.dart';
+import 'package:recipe/screens/categories.dart';
 
 class IngredientsPage extends StatelessWidget {
   final SubSubcategory subsubcategory;

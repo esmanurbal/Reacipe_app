@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
-import 'package:recipe/constant.dart';
+import 'package:recipe/components/constant.dart';
+
 
 
 class LoginScrenn extends StatefulWidget {
