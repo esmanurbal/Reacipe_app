@@ -1311,7 +1311,6 @@ isAlwaysShown: true,
                                               ],
                                             ),
 
-
                                             Expanded(
                                               child: Container(
                                                   child: ListView.builder(
@@ -1339,14 +1338,6 @@ isAlwaysShown: true,
                             // ),
                           ],
                         ),
-
-                        onTap: () {
-                          Navigator.of(context).push(
-                            MaterialPageRoute(
-                              builder: (context) => IngredientsPage(subsubcategory: subsubcategory),)
-                          );
-                        },
-
                       ),
                     );
                   },
