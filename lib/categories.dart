@@ -5,8 +5,14 @@ import 'package:recipe/Ingredients.dart';
 import 'package:recipe/components/constant.dart';
 
 
+import 'IngredientsScreen.dart';
+
 class CategoriesPage extends StatefulWidget {
   const CategoriesPage({super.key});
+
+
+
+
   @override
   _CategoriesPageState createState() => _CategoriesPageState();
 }
@@ -20,12 +26,30 @@ class _CategoriesPageState extends State<CategoriesPage> {
         Subcategory(
           id: 1,
           name: 'Subcategory',
-          image: 'assets/categories/mexican.png',
+          image: 'assets/categories/pide.png',
           subsubcategories: [
             SubSubcategory(
               id: 4,
               name: 'Subcategory 4',
+
               image: 'assets/categories/turkish.png',
+              subsubsubcategories: [
+                SubSubSubcategory(
+                  id:1,
+                  name: '',
+                  yemekTarifleri : ['4 Tomatoes',
+                    '1 Tablespoon of Olive Oil',
+                    '1 Onion',
+                    '250g Spaghetti',
+                    'Spices',
+                    'Cheese (optional)' ],
+                  yemekTarifleri1 : ['Kemiksiz olarak satın aldığınız fileto tavuk göğsünü tavuk şiş hazırlamak için iri küpler halinde kesin  Kabuğunun kolayca soyulabilmesi sıcak suda beklettiğiniz arpacık soğanları halka halka dilimleyin. Ortadan ikiye kesip çekirdeklerini çıkardığınız kırmızı biberi küçük parçalar halinde kesin.Tavuk şişin marinasyon karışımı için; zeytinyağı, taze sıkılmış limon suyu, yoğurt, toz kişniş, taze çekilmiş tane karabiber ve defne yaprağını tavuk etleriyle birlikte derin bir kapta harmanlayınEn az 20 dakika marinasyon karışımında beklettiğiniz tavuk parçalarını, bir tavuk, bir arpacık soğan dilimi, bir kırmızı biber parçası olmak üzere tahta şişlere dizin',
+                  ],
+                  image:'assets/categories/pide.png',
+
+                )
+
+              ]
             )
           ],
         ),
@@ -38,6 +62,20 @@ class _CategoriesPageState extends State<CategoriesPage> {
               id: 4,
               name: 'Subcategory 4',
               image: 'assets/categories/turkish.png',
+              subsubsubcategories: [
+                SubSubSubcategory(
+                    id:4,
+                  name: 'doner',
+                  yemekTarifleri :['4 Tomatoes',
+                    '1 Tablespoon of Olive Oil',
+                    '1 Onion',
+                    '250g Spaghetti',
+                    'Spices',
+                    'Cheese (optional)' ],
+                  yemekTarifleri1 : ['Kemiksiz olarak satın aldığınız fileto tavuk göğsünü tavuk şiş hazırlamak için iri küpler halinde kesin  Kabuğunun kolayca soyulabilmesi sıcak suda beklettiğiniz arpacık soğanları halka halka dilimleyin. Ortadan ikiye kesip çekirdeklerini çıkardığınız kırmızı biberi küçük parçalar halinde kesin.Tavuk şişin marinasyon karışımı için; zeytinyağı, taze sıkılmış limon suyu, yoğurt, toz kişniş, taze çekilmiş tane karabiber ve defne yaprağını tavuk etleriyle birlikte derin bir kapta harmanlayın 	En az 20 dakika marinasyon karışımında beklettiğiniz tavuk parçalarını, bir tavuk, bir arpacık soğan dilimi, bir kırmızı biber parçası olmak üzere tahta şişlere dizin',
+                  ],
+                  image:'assets/categories/pide.png',)
+              ]
             )
           ],        ),      ],
     ),
@@ -55,11 +93,45 @@ class _CategoriesPageState extends State<CategoriesPage> {
               id: 4,
               name: 'Subcategory 4',
               image: 'assets/categories/turkish.png',
+                subsubsubcategories: [
+                  SubSubSubcategory(
+                    id:4,
+                    name: 'doner',
+                    yemekTarifleri :['4 Tomatoes',
+                      '1 Tablespoon of Olive Oil',
+                      '1 Onion',
+                      '250g Spaghetti',
+                      'Spices',
+                      'Cheese (optional)' ],
+                    yemekTarifleri1 : ['Kemiksiz olarak satın aldığınız fileto tavuk göğsünü tavuk şiş hazırlamak için iri küpler halinde kesin  Kabuğunun kolayca soyulabilmesi sıcak suda beklettiğiniz arpacık soğanları halka halka dilimleyin. Ortadan ikiye kesip çekirdeklerini çıkardığınız kırmızı biberi küçük parçalar halinde kesin.Tavuk şişin marinasyon karışımı için; zeytinyağı, taze sıkılmış limon suyu, yoğurt, toz kişniş, taze çekilmiş tane karabiber ve defne yaprağını tavuk etleriyle birlikte derin bir kapta harmanlayın 1.	En az 20 dakika marinasyon karışımında beklettiğiniz tavuk parçalarını, bir tavuk, bir arpacık soğan dilimi, bir kırmızı biber parçası olmak üzere tahta şişlere dizin',
+                    ],
+                    image:'assets/categories/pide.png',
+
+                  )
+
+                ]
             ),
             SubSubcategory(
               id: 4,
               name: 'Subcategory 4',
               image: 'assets/categories/turkish.png',
+                subsubsubcategories: [
+                  SubSubSubcategory(
+                    id:4,
+                    name: 'doner',
+                    yemekTarifleri : ['4 Tomatoes',
+                      '1 Tablespoon of Olive Oil',
+                      '1 Onion',
+                      '250g Spaghetti',
+                      'Spices',
+                      'Cheese (optional)' ],
+                    yemekTarifleri1 : ['Kemiksiz olarak satın aldığınız fileto tavuk göğsünü tavuk şiş hazırlamak için iri küpler halinde kesin  Kabuğunun kolayca soyulabilmesi sıcak suda beklettiğiniz arpacık soğanları halka halka dilimleyin. Ortadan ikiye kesip çekirdeklerini çıkardığınız kırmızı biberi küçük parçalar halinde kesin.Tavuk şişin marinasyon karışımı için; zeytinyağı, taze sıkılmış limon suyu, yoğurt, toz kişniş, taze çekilmiş tane karabiber ve defne yaprağını tavuk etleriyle birlikte derin bir kapta harmanlayın 1.	En az 20 dakika marinasyon karışımında beklettiğiniz tavuk parçalarını, bir tavuk, bir arpacık soğan dilimi, bir kırmızı biber parçası olmak üzere tahta şişlere dizin',
+                    ],
+                    image:'assets/categories/turkish.png',
+
+                  )
+
+                ]
             )
           ],
         ),
@@ -72,33 +144,118 @@ class _CategoriesPageState extends State<CategoriesPage> {
               id: 4,
               name: 'Lentil Soup',
               image: 'assets/categories/LentilSoup.png',
+                subsubsubcategories: [
+                  SubSubSubcategory(
+                    id:4,
+                    name: 'Lentil Soup',
+                    yemekTarifleri : ['4 Tomatoes',
+                      '1 Tablespoon of Olive Oil',
+                      '1 Onion',
+                      '250g Spaghetti',
+                      'Spices',
+                      'Cheese (optional)' ],
+                    yemekTarifleri1 : ['Kemiksiz olarak satın aldığınız fileto tavuk göğsünü tavuk şiş hazırlamak için iri küpler halinde kesin  Kabuğunun kolayca soyulabilmesi sıcak suda beklettiğiniz arpacık soğanları halka halka dilimleyin. Ortadan ikiye kesip çekirdeklerini çıkardığınız kırmızı biberi küçük parçalar halinde kesin.Tavuk şişin marinasyon karışımı için; zeytinyağı, taze sıkılmış limon suyu, yoğurt, toz kişniş, taze çekilmiş tane karabiber ve defne yaprağını tavuk etleriyle birlikte derin bir kapta harmanlayın 1.	En az 20 dakika marinasyon karışımında beklettiğiniz tavuk parçalarını, bir tavuk, bir arpacık soğan dilimi, bir kırmızı biber parçası olmak üzere tahta şişlere dizin',
+                    ],
+                    image:'assets/categories/turkish.png',
+
+                  )
+
+                ]
             ),
             SubSubcategory(
               id: 4,
               name: 'Tomato Soup',
               image: 'assets/categories/tomatoSoup.png',
+                subsubsubcategories: [
+                  SubSubSubcategory(
+                    id:3,
+                    name: 'Tomato Soup',
+                    yemekTarifleri : ['4 Tomatoes',
+                      '1 Tablespoon of Olive Oil',
+                      '1 Onion',
+                      '250g Spaghetti',
+                      'Spices',
+                      'Cheese (optional)' ],
+                    yemekTarifleri1 : ['Kemiksiz olarak satın aldığınız fileto tavuk göğsünü tavuk şiş hazırlamak için iri küpler halinde kesin  Kabuğunun kolayca soyulabilmesi sıcak suda beklettiğiniz arpacık soğanları halka halka dilimleyin. Ortadan ikiye kesip çekirdeklerini çıkardığınız kırmızı biberi küçük parçalar halinde kesin.Tavuk şişin marinasyon karışımı için; zeytinyağı, taze sıkılmış limon suyu, yoğurt, toz kişniş, taze çekilmiş tane karabiber ve defne yaprağını tavuk etleriyle birlikte derin bir kapta harmanlayın 1.	En az 20 dakika marinasyon karışımında beklettiğiniz tavuk parçalarını, bir tavuk, bir arpacık soğan dilimi, bir kırmızı biber parçası olmak üzere tahta şişlere dizin',
+                    ],
+                    image:'assets/categories/turkish.png',
+
+                  )
+
+                ]
             ),
             SubSubcategory(
               id: 4,
               name: 'Chicken Borth Soup',
               image: 'assets/categories/ChickenBorthSoup.png',
+                subsubsubcategories: [
+                  SubSubSubcategory(
+                    id:4,
+                    name: 'Chicken Borth Soup',
+                    yemekTarifleri :['4 Tomatoes',
+                      '1 Tablespoon of Olive Oil',
+                      '1 Onion',
+                      '250g Spaghetti',
+                      'Spices',
+                      'Cheese (optional)' ],
+                    yemekTarifleri1 : ['Kemiksiz olarak satın aldığınız fileto tavuk göğsünü tavuk şiş hazırlamak için iri küpler halinde kesin  Kabuğunun kolayca soyulabilmesi sıcak suda beklettiğiniz arpacık soğanları halka halka dilimleyin. Ortadan ikiye kesip çekirdeklerini çıkardığınız kırmızı biberi küçük parçalar halinde kesin.Tavuk şişin marinasyon karışımı için; zeytinyağı, taze sıkılmış limon suyu, yoğurt, toz kişniş, taze çekilmiş tane karabiber ve defne yaprağını tavuk etleriyle birlikte derin bir kapta harmanlayın 1.	En az 20 dakika marinasyon karışımında beklettiğiniz tavuk parçalarını, bir tavuk, bir arpacık soğan dilimi, bir kırmızı biber parçası olmak üzere tahta şişlere dizin',
+                    ],
+                    image:'assets/categories/turkish.png',
+
+                  )
+
+                ]
             ),
             SubSubcategory(
               id: 4,
               name: 'Vermiceli Soup',
               image: 'assets/categories/vermicelli.png',
+                subsubsubcategories: [
+                  SubSubSubcategory(
+                    id:4,
+                    name: 'Vermiceli Soup',
+                    yemekTarifleri : ['4 Tomatoes',
+                      '1 Tablespoon of Olive Oil',
+                      '1 Onion',
+                      '250g Spaghetti',
+                      'Spices',
+                      'Cheese (optional)' ],
+                    yemekTarifleri1 : ['Kemiksiz olarak satın aldığınız fileto tavuk göğsünü tavuk şiş hazırlamak için iri küpler halinde kesin  Kabuğunun kolayca soyulabilmesi sıcak suda beklettiğiniz arpacık soğanları halka halka dilimleyin. Ortadan ikiye kesip çekirdeklerini çıkardığınız kırmızı biberi küçük parçalar halinde kesin.Tavuk şişin marinasyon karışımı için; zeytinyağı, taze sıkılmış limon suyu, yoğurt, toz kişniş, taze çekilmiş tane karabiber ve defne yaprağını tavuk etleriyle birlikte derin bir kapta harmanlayın 1.	En az 20 dakika marinasyon karışımında beklettiğiniz tavuk parçalarını, bir tavuk, bir arpacık soğan dilimi, bir kırmızı biber parçası olmak üzere tahta şişlere dizin',
+                    ],
+                    image:'assets/categories/turkish.png',
+
+                  )
+
+                ]
             )
           ],
         ),
         Subcategory(
           id: 4,
-          name: 'Salata',
+          name: 'Salad',
           image: 'assets/categories/salata.png',
           subsubcategories: [
             SubSubcategory(
               id: 4,
-              name: 'Subcategory 4',
-              image: 'assets/categories/turkish.png',
+              name: 'Salad',
+              image: 'assets/categories/salata.png',
+                subsubsubcategories: [
+                  SubSubSubcategory(
+                    id:4,
+                    name: 'Salad',
+                    yemekTarifleri : ['4 Tomatoes',
+                      '1 Tablespoon of Olive Oil',
+                      '1 Onion',
+                      '250g Spaghetti',
+                      'Spices',
+                      'Cheese (optional)' ],
+                    yemekTarifleri1 : ['Kemiksiz olarak satın aldığınız fileto tavuk göğsünü tavuk şiş hazırlamak için iri küpler halinde kesin  Kabuğunun kolayca soyulabilmesi sıcak suda beklettiğiniz arpacık soğanları halka halka dilimleyin. Ortadan ikiye kesip çekirdeklerini çıkardığınız kırmızı biberi küçük parçalar halinde kesin.Tavuk şişin marinasyon karışımı için; zeytinyağı, taze sıkılmış limon suyu, yoğurt, toz kişniş, taze çekilmiş tane karabiber ve defne yaprağını tavuk etleriyle birlikte derin bir kapta harmanlayın 1.	En az 20 dakika marinasyon karışımında beklettiğiniz tavuk parçalarını, bir tavuk, bir arpacık soğan dilimi, bir kırmızı biber parçası olmak üzere tahta şişlere dizin',
+                    ],
+                    image:'assets/categories/turkish.png',
+
+                  )
+
+                ]
             )
           ],
         ),
@@ -111,6 +268,23 @@ class _CategoriesPageState extends State<CategoriesPage> {
               id: 4,
               name: 'Subcategory 4',
               image: 'assets/categories/turkish.png',
+                subsubsubcategories: [
+                  SubSubSubcategory(
+                    id:4,
+                    name: 'Kebab',
+                    yemekTarifleri : ['4 Tomatoes',
+                      '1 Tablespoon of Olive Oil',
+                      '1 Onion',
+                      '250g Spaghetti',
+                      'Spices',
+                      'Cheese (optional)' ],
+                    yemekTarifleri1 : ['Kemiksiz olarak satın aldığınız fileto tavuk göğsünü tavuk şiş hazırlamak için iri küpler halinde kesin  Kabuğunun kolayca soyulabilmesi sıcak suda beklettiğiniz arpacık soğanları halka halka dilimleyin. Ortadan ikiye kesip çekirdeklerini çıkardığınız kırmızı biberi küçük parçalar halinde kesin.Tavuk şişin marinasyon karışımı için; zeytinyağı, taze sıkılmış limon suyu, yoğurt, toz kişniş, taze çekilmiş tane karabiber ve defne yaprağını tavuk etleriyle birlikte derin bir kapta harmanlayın 	En az 20 dakika marinasyon karışımında beklettiğiniz tavuk parçalarını, bir tavuk, bir arpacık soğan dilimi, bir kırmızı biber parçası olmak üzere tahta şişlere dizin',
+                    ],
+                    image:'assets/categories/turkish.png',
+
+                  )
+
+                ]
             )
           ],
         ),
@@ -123,6 +297,23 @@ class _CategoriesPageState extends State<CategoriesPage> {
               id: 4,
               name: 'Subcategory 4',
               image: 'assets/categories/turkish.png',
+                subsubsubcategories: [
+                  SubSubSubcategory(
+                    id:4,
+                    name: 'Rice',
+                    yemekTarifleri :['4 Tomatoes',
+                      '1 Tablespoon of Olive Oil',
+                      '1 Onion',
+                      '250g Spaghetti',
+                      'Spices',
+                      'Cheese (optional)' ],
+                    yemekTarifleri1 : ['Kemiksiz olarak satın aldığınız fileto tavuk göğsünü tavuk şiş hazırlamak için iri küpler halinde kesin  Kabuğunun kolayca soyulabilmesi sıcak suda beklettiğiniz arpacık soğanları halka halka dilimleyin. Ortadan ikiye kesip çekirdeklerini çıkardığınız kırmızı biberi küçük parçalar halinde kesin.Tavuk şişin marinasyon karışımı için; zeytinyağı, taze sıkılmış limon suyu, yoğurt, toz kişniş, taze çekilmiş tane karabiber ve defne yaprağını tavuk etleriyle birlikte derin bir kapta harmanlayın 1.	En az 20 dakika marinasyon karışımında beklettiğiniz tavuk parçalarını, bir tavuk, bir arpacık soğan dilimi, bir kırmızı biber parçası olmak üzere tahta şişlere dizin',
+                    ],
+                    image:'assets/categories/turkish.png',
+
+                  )
+
+                ]
             )
           ],
         ),
@@ -135,6 +326,23 @@ class _CategoriesPageState extends State<CategoriesPage> {
               id: 4,
               name: 'Subcategory 4',
               image: 'assets/categories/tatlı.png',
+                subsubsubcategories: [
+                  SubSubSubcategory(
+                    id:4,
+                    name: 'Dessert',
+                    yemekTarifleri :['4 Tomatoes',
+                      '1 Tablespoon of Olive Oil',
+                      '1 Onion',
+                      '250g Spaghetti',
+                      'Spices',
+                      'Cheese (optional)' ],
+                    yemekTarifleri1 : ['Kemiksiz olarak satın aldığınız fileto tavuk göğsünü tavuk şiş hazırlamak için iri küpler halinde kesin  Kabuğunun kolayca soyulabilmesi sıcak suda beklettiğiniz arpacık soğanları halka halka dilimleyin. Ortadan ikiye kesip çekirdeklerini çıkardığınız kırmızı biberi küçük parçalar halinde kesin.Tavuk şişin marinasyon karışımı için; zeytinyağı, taze sıkılmış limon suyu, yoğurt, toz kişniş, taze çekilmiş tane karabiber ve defne yaprağını tavuk etleriyle birlikte derin bir kapta harmanlayın 1.	En az 20 dakika marinasyon karışımında beklettiğiniz tavuk parçalarını, bir tavuk, bir arpacık soğan dilimi, bir kırmızı biber parçası olmak üzere tahta şişlere dizin',
+                    ],
+                    image:'assets/categories/turkish.png',
+
+                  )
+
+                ]
             )
           ],
         ),
@@ -154,6 +362,23 @@ class _CategoriesPageState extends State<CategoriesPage> {
               id: 4,
               name: 'Subcategory 4',
               image: 'assets/categories/turkish.png',
+                subsubsubcategories: [
+                  SubSubSubcategory(
+                    id:4,
+                    name: 'Linguine',
+                    yemekTarifleri :['4 Tomatoes',
+                      '1 Tablespoon of Olive Oil',
+                      '1 Onion',
+                      '250g Spaghetti',
+                      'Spices',
+                      'Cheese (optional)' ],
+                    yemekTarifleri1 : ['Kemiksiz olarak satın aldığınız fileto tavuk göğsünü tavuk şiş hazırlamak için iri küpler halinde kesin  Kabuğunun kolayca soyulabilmesi sıcak suda beklettiğiniz arpacık soğanları halka halka dilimleyin. Ortadan ikiye kesip çekirdeklerini çıkardığınız kırmızı biberi küçük parçalar halinde kesin.Tavuk şişin marinasyon karışımı için; zeytinyağı, taze sıkılmış limon suyu, yoğurt, toz kişniş, taze çekilmiş tane karabiber ve defne yaprağını tavuk etleriyle birlikte derin bir kapta harmanlayın 1.	En az 20 dakika marinasyon karışımında beklettiğiniz tavuk parçalarını, bir tavuk, bir arpacık soğan dilimi, bir kırmızı biber parçası olmak üzere tahta şişlere dizin',
+                    ],
+                    image:'assets/categories/turkish.png',
+
+                  )
+
+                ]
             )
           ],
         ),
@@ -166,6 +391,23 @@ class _CategoriesPageState extends State<CategoriesPage> {
               id: 4,
               name: 'Subcategory 4',
               image: 'assets/categories/turkish.png',
+                subsubsubcategories: [
+                  SubSubSubcategory(
+                    id:4,
+                    name: 'Wrap',
+                    yemekTarifleri : ['4 Tomatoes',
+                      '1 Tablespoon of Olive Oil',
+                      '1 Onion',
+                      '250g Spaghetti',
+                      'Spices',
+                      'Cheese (optional)' ],
+                    yemekTarifleri1 : ['Kemiksiz olarak satın aldığınız fileto tavuk göğsünü tavuk şiş hazırlamak için iri küpler halinde kesin  Kabuğunun kolayca soyulabilmesi sıcak suda beklettiğiniz arpacık soğanları halka halka dilimleyin. Ortadan ikiye kesip çekirdeklerini çıkardığınız kırmızı biberi küçük parçalar halinde kesin.Tavuk şişin marinasyon karışımı için; zeytinyağı, taze sıkılmış limon suyu, yoğurt, toz kişniş, taze çekilmiş tane karabiber ve defne yaprağını tavuk etleriyle birlikte derin bir kapta harmanlayın 1.	En az 20 dakika marinasyon karışımında beklettiğiniz tavuk parçalarını, bir tavuk, bir arpacık soğan dilimi, bir kırmızı biber parçası olmak üzere tahta şişlere dizin',
+                    ],
+                    image:'assets/categories/turkish.png',
+
+                  )
+
+                ]
             )
           ],
         ),
@@ -185,6 +427,23 @@ class _CategoriesPageState extends State<CategoriesPage> {
               id: 4,
               name: 'Subcategory 4',
               image: 'assets/categories/turkish.png',
+                subsubsubcategories: [
+                  SubSubSubcategory(
+                    id:4,
+                    name: 'Onion Soup',
+                    yemekTarifleri : ['4 Tomatoes',
+                      '1 Tablespoon of Olive Oil',
+                      '1 Onion',
+                      '250g Spaghetti',
+                      'Spices',
+                      'Cheese (optional)' ],
+                    yemekTarifleri1 : ['Kemiksiz olarak satın aldığınız fileto tavuk göğsünü tavuk şiş hazırlamak için iri küpler halinde kesin  Kabuğunun kolayca soyulabilmesi sıcak suda beklettiğiniz arpacık soğanları halka halka dilimleyin. Ortadan ikiye kesip çekirdeklerini çıkardığınız kırmızı biberi küçük parçalar halinde kesin.Tavuk şişin marinasyon karışımı için; zeytinyağı, taze sıkılmış limon suyu, yoğurt, toz kişniş, taze çekilmiş tane karabiber ve defne yaprağını tavuk etleriyle birlikte derin bir kapta harmanlayın 1.	En az 20 dakika marinasyon karışımında beklettiğiniz tavuk parçalarını, bir tavuk, bir arpacık soğan dilimi, bir kırmızı biber parçası olmak üzere tahta şişlere dizin',
+                    ],
+                    image:'assets/categories/turkish.png',
+
+                  )
+
+                ]
             )
           ],
         ),
@@ -197,6 +456,34 @@ class _CategoriesPageState extends State<CategoriesPage> {
               id: 4,
               name: 'Subcategory 4',
               image: 'assets/categories/turkish.png',
+                subsubsubcategories: [
+                  SubSubSubcategory(
+                    id:4,
+                    name: 'Pita',
+                    yemekTarifleri : ['4 Tomatoes',
+                      '1 Tablespoon of Olive Oil',
+                      '1 Onion',
+                      '250g Spaghetti',
+                      'Spices',
+                      'Cheese (optional)' ],
+                    yemekTarifleri1 : ['1.	Mix Marinade in a large bowl. Add chicken and mix to coat well.',
+  '2.	Cover and marinate in the fridge for a minimum of 3 hours, 24 hours is ideal. If only 3 hours, add an extra 1/2 tsp salt.',
+  '3.	Preheat oven to 220C / 430F (standard) or 200C / 390F (fan / convection).',
+  '4.	Choose a pan of a size such that the skewers will stay propped up on the pan walls (see photos in post or video) and the chicken will be elevated off the base. Line with foil.',
+  '5.	Remove chicken from fridge. Divide the chicken into 2 piles.',
+  '6.	Take one piece of chicken, fold in half then thread onto two skewers (see video). Repeat and push the chicken snugly up against each other. Repeat with other skewer.',
+  '7.	Prop the 2 skewers on the edges of the baking pan. Drizzle surface with oil.',
+  '8.	Bake for 35 minutes or until the surface is golden with some charred bits (char is good!).',
+  '9.	Spoon the pan juices over the chicken. Then turn, drizzle with oil and bake for 20 minutes (or 25 - 30 minutes if you had large thighs). If you need / want more colour, switch to grill/broil for a few minutes on high - I dont do this.',
+  '10.	Baste again with pan juices and stand for 5 minutes.',
+  '11.	Carving: Stand the skewers upright or on an angle, and slice meat fairly thinly. Use to make Doner Kebabs or Kebab Plates.',
+
+                    ],
+                    image:'assets/categories/turkish.png',
+
+                  )
+
+                ]
             )
           ],
         ),
@@ -216,6 +503,23 @@ class _CategoriesPageState extends State<CategoriesPage> {
               id: 4,
               name: 'Subcategory 4',
               image: 'assets/categories/turkish.png',
+                subsubsubcategories: [
+                  SubSubSubcategory(
+                    id:4,
+                    name: 'Sushi',
+                    yemekTarifleri : ['4 Tomatoes',
+                      '1 Tablespoon of Olive Oil',
+                      '1 Onion',
+                      '250g Spaghetti',
+                      'Spices',
+                      'Cheese (optional)' ],
+                    yemekTarifleri1 : ['Kemiksiz olarak satın aldığınız fileto tavuk göğsünü tavuk şiş hazırlamak için iri küpler halinde kesin  Kabuğunun kolayca soyulabilmesi sıcak suda beklettiğiniz arpacık soğanları halka halka dilimleyin. Ortadan ikiye kesip çekirdeklerini çıkardığınız kırmızı biberi küçük parçalar halinde kesin.Tavuk şişin marinasyon karışımı için; zeytinyağı, taze sıkılmış limon suyu, yoğurt, toz kişniş, taze çekilmiş tane karabiber ve defne yaprağını tavuk etleriyle birlikte derin bir kapta harmanlayın 1.	En az 20 dakika marinasyon karışımında beklettiğiniz tavuk parçalarını, bir tavuk, bir arpacık soğan dilimi, bir kırmızı biber parçası olmak üzere tahta şişlere dizin',
+                    ],
+                    image:'assets/categories/turkish.png',
+
+                  )
+
+                ]
             )
           ],
         ),
@@ -228,6 +532,23 @@ class _CategoriesPageState extends State<CategoriesPage> {
               id: 4,
               name: 'Subcategory 4',
               image: 'assets/categories/turkish.png',
+                subsubsubcategories: [
+                  SubSubSubcategory(
+                    id:4,
+                    name: 'Bento',
+                    yemekTarifleri : ['4 Tomatoes',
+                      '1 Tablespoon of Olive Oil',
+                      '1 Onion',
+                      '250g Spaghetti',
+                      'Spices',
+                      'Cheese (optional)' ],
+                    yemekTarifleri1 : ['Kemiksiz olarak satın aldığınız fileto tavuk göğsünü tavuk şiş hazırlamak için iri küpler halinde kesin  Kabuğunun kolayca soyulabilmesi sıcak suda beklettiğiniz arpacık soğanları halka halka dilimleyin. Ortadan ikiye kesip çekirdeklerini çıkardığınız kırmızı biberi küçük parçalar halinde kesin.Tavuk şişin marinasyon karışımı için; zeytinyağı, taze sıkılmış limon suyu, yoğurt, toz kişniş, taze çekilmiş tane karabiber ve defne yaprağını tavuk etleriyle birlikte derin bir kapta harmanlayın 1.	En az 20 dakika marinasyon karışımında beklettiğiniz tavuk parçalarını, bir tavuk, bir arpacık soğan dilimi, bir kırmızı biber parçası olmak üzere tahta şişlere dizin',
+                    ],
+                    image:'assets/categories/turkish.png',
+
+                  )
+
+                ]
             )
           ],
         ),
@@ -247,6 +568,23 @@ class _CategoriesPageState extends State<CategoriesPage> {
               id: 4,
               name: 'Subcategory 4',
               image: 'assets/categories/turkish.png',
+                subsubsubcategories: [
+                  SubSubSubcategory(
+                    id:4,
+                    name: 'Tacos',
+                    yemekTarifleri :['4 Tomatoes',
+                      '1 Tablespoon of Olive Oil',
+                      '1 Onion',
+                      '250g Spaghetti',
+                      'Spices',
+                      'Cheese (optional)' ],
+                    yemekTarifleri1 : ['Kemiksiz olarak satın aldığınız fileto tavuk göğsünü tavuk şiş hazırlamak için iri küpler halinde kesin  Kabuğunun kolayca soyulabilmesi sıcak suda beklettiğiniz arpacık soğanları halka halka dilimleyin. Ortadan ikiye kesip çekirdeklerini çıkardığınız kırmızı biberi küçük parçalar halinde kesin.Tavuk şişin marinasyon karışımı için; zeytinyağı, taze sıkılmış limon suyu, yoğurt, toz kişniş, taze çekilmiş tane karabiber ve defne yaprağını tavuk etleriyle birlikte derin bir kapta harmanlayın 1.	En az 20 dakika marinasyon karışımında beklettiğiniz tavuk parçalarını, bir tavuk, bir arpacık soğan dilimi, bir kırmızı biber parçası olmak üzere tahta şişlere dizin',
+                    ],
+                    image:'assets/categories/turkish.png',
+
+                  )
+
+                ]
             )],
         ),
         Subcategory(
@@ -258,6 +596,23 @@ class _CategoriesPageState extends State<CategoriesPage> {
               id: 4,
               name: 'Subcategory 4',
               image: 'assets/categories/turkish.png',
+                subsubsubcategories: [
+                  SubSubSubcategory(
+                    id:4,
+                    name: 'Spanish Omlette',
+                    yemekTarifleri : ['4 Tomatoes',
+                      '1 Tablespoon of Olive Oil',
+                      '1 Onion',
+                      '250g Spaghetti',
+                      'Spices',
+                      'Cheese (optional)' ],
+                    yemekTarifleri1 : ['Kemiksiz olarak satın aldığınız fileto tavuk göğsünü tavuk şiş hazırlamak için iri küpler halinde kesin  Kabuğunun kolayca soyulabilmesi sıcak suda beklettiğiniz arpacık soğanları halka halka dilimleyin. Ortadan ikiye kesip çekirdeklerini çıkardığınız kırmızı biberi küçük parçalar halinde kesin.Tavuk şişin marinasyon karışımı için; zeytinyağı, taze sıkılmış limon suyu, yoğurt, toz kişniş, taze çekilmiş tane karabiber ve defne yaprağını tavuk etleriyle birlikte derin bir kapta harmanlayın 1.	En az 20 dakika marinasyon karışımında beklettiğiniz tavuk parçalarını, bir tavuk, bir arpacık soğan dilimi, bir kırmızı biber parçası olmak üzere tahta şişlere dizin',
+                    ],
+                    image:'assets/categories/turkish.png',
+
+                  )
+
+                ]
             )],
         ),
       ],
@@ -269,6 +624,7 @@ class _CategoriesPageState extends State<CategoriesPage> {
   Widget build(BuildContext context) {
 
     return Scaffold(
+
       body: Container(
         decoration: getTransitionalDecoration(),
         padding: const EdgeInsets.only(top: 40),
@@ -290,7 +646,7 @@ class _CategoriesPageState extends State<CategoriesPage> {
                 ),
               ),),
 
-              Padding(
+      Padding(
                   padding: const EdgeInsets.symmetric(horizontal: 40,vertical: 20),
                   child: Align(
                     alignment: Alignment.topRight,
@@ -322,7 +678,7 @@ class _CategoriesPageState extends State<CategoriesPage> {
                   decoration: InputDecoration(
                     border: InputBorder.none,
                     prefixIcon: Icon(Icons.search,color: Colors.black),
-                    hintText: 'What dou you want to cook today?',
+                    hintText: 'What do you want to cook today?',
                   ),
                 ),
               ),
@@ -362,7 +718,7 @@ class _CategoriesPageState extends State<CategoriesPage> {
                             Image.asset(category.image),
                             Padding(
                               padding: const EdgeInsets.symmetric(vertical: 0),
-                              child: Text(category.name, style: const TextStyle(backgroundColor: Color(0xFFFF4D67C)),),
+                             child: Text(category.name, style: const TextStyle(backgroundColor: Color(0xFFFF4D67C)),),
                             ),
                           ],
                         ),
@@ -482,10 +838,10 @@ class _SubCategoriesPageState extends State<SubCategoriesPage> {
             ),
             Padding(
               padding: EdgeInsets.all(20),
-              child: Text(
-                category.name,
-                style: TextStyle(fontSize: 20, fontWeight: FontWeight.bold),
-              ),
+               child: Text(
+                 category.name,
+                 style: TextStyle(fontSize: 20, fontWeight: FontWeight.bold),
+               ),
             ),
             Expanded(
               child: Padding(
@@ -542,6 +898,7 @@ class SubSubcategoriesPage extends StatefulWidget{
   final Subcategory subcategory;
   @override
   _SubSubcategoriesPage createState() => _SubSubcategoriesPage(key: UniqueKey(), subcategory: this.subcategory);
+
 
 }
 
@@ -636,7 +993,10 @@ class _SubSubcategoriesPage extends State<SubSubcategoriesPage> {
                   decoration: InputDecoration(
                     border: InputBorder.none,
                     prefixIcon: Icon(Icons.search,color: Colors.black),
-                    hintText: 'What dou you want to cook today?',
+
+                    hintText: 'What do you want to cook today?',
+
+
                   ),
                 ),
               ),
@@ -682,12 +1042,17 @@ class _SubSubcategoriesPage extends State<SubSubcategoriesPage> {
                             ),
                           ],
                         ),
+
                         onTap: () {
                           Navigator.of(context).push(
                             MaterialPageRoute(
-                              builder: (context) => IngredientsPage(subsubcategory: subsubcategory),)
+                              builder: (context) => SubSubSubcategoriesPage( key: UniqueKey(),subsubcategory : subsubcategory),
+                            ),
                           );
                         },
+
+                     
+
                       ),
                     );
                   },
@@ -696,6 +1061,363 @@ class _SubSubcategoriesPage extends State<SubSubcategoriesPage> {
             ),
           ],
         ),
+      ),
+    );
+  }
+}
+class SubSubSubcategoriesPage extends StatelessWidget {
+  final SubSubcategory subsubcategory;
+
+  final ScrollController _controller = ScrollController();
+
+  SubSubSubcategoriesPage({required Key key,required this.subsubcategory}) : super(key: key);
+
+  @override
+  Widget build(BuildContext context) {
+
+    return Scaffold(
+
+      appBar: AppBar(
+        backgroundColor: Color(0xFFFF4D77D),
+
+        actions: [
+        IconButton(
+          icon: Icon(Icons.notifications),
+          onPressed: () {
+            // Zil iconu tıklandığında çalıştırılacak kod bloğu
+          },
+        ),
+    IconButton(
+    icon: Icon(Icons.restaurant),
+    onPressed: () {
+    }
+    ),
+
+      ],
+        title: Text("Recipes"),
+      ),
+
+
+
+
+
+      body:RawScrollbar(
+        thumbColor: Colors.blue,
+        radius: Radius.circular(20),
+        thickness: 10,
+
+        interactive:true ,
+        minThumbLength: 100,
+        controller: _controller,
+isAlwaysShown: true,
+
+        child: Container(
+       margin: EdgeInsets.all(4.0),
+        decoration: getTransitionalDecoration(),
+
+        child: Column(
+          crossAxisAlignment: CrossAxisAlignment.start,
+          children: [
+            const SizedBox(
+                height: 5.0
+            ),
+            // Padding(
+            //   padding: const EdgeInsets.symmetric(vertical: 30, horizontal: 10),
+            //   child: Container(
+            //     decoration: BoxDecoration(
+            //         borderRadius: BorderRadius.circular(20),
+            //         color: Colors.grey[200]),
+            //     child: const TextField(
+            //       decoration: InputDecoration(
+            //         border: InputBorder.none,
+            //         prefixIcon: Icon(Icons.search,color: Colors.black),
+            //         hintText: ' Yemek Ara',
+            //       ),
+            //     ),
+            //   ),
+            // ),
+            SizedBox(height: 0),
+            Row(
+
+              mainAxisSize: MainAxisSize.min,
+              mainAxisAlignment: MainAxisAlignment.spaceBetween,
+
+              children: [
+                Expanded(
+
+                  //child: Image.asset("resim.jpg"),
+                  child:Image.asset(subsubcategory.image,width:200,height:200),
+                ),
+                SizedBox(height: 1),
+                Container(
+                  margin: EdgeInsets.only(bottom: 4.0),
+                  decoration: BoxDecoration(
+                    color: Color(0xFFF4D67C),
+                    borderRadius: BorderRadius.circular(20.0),
+                  ),
+                  child: Column(
+                    mainAxisSize: MainAxisSize.min,
+                    children: [
+                      Container(
+                        margin: EdgeInsets.all(8.0),
+
+                        padding: EdgeInsets.all(8.0),
+                        decoration: BoxDecoration(
+                          color: Colors.lightBlue,
+                          borderRadius: BorderRadius.circular(10.0),
+                        ),
+                        child: Text(
+                          "300 Kcal",
+                          style: TextStyle(
+                            color: Colors.white,
+                            fontWeight: FontWeight.bold,
+                          ),
+                        ),
+                      ),
+
+
+                      Container(
+
+                        margin: EdgeInsets.only(bottom: 4.0),
+
+                        padding: EdgeInsets.all(8.0),
+                        decoration: BoxDecoration(
+                          color: Colors.lightGreen,
+                          borderRadius: BorderRadius.circular(20.0),
+                        ),
+                        child: Text(
+                          "45 mins      ",
+                          style: TextStyle(
+                            color: Colors.white,
+                            fontWeight: FontWeight.bold,
+                          ),
+                        ),
+                      ),
+                      Container(
+                        padding: EdgeInsets.all(8.0),
+                        margin: EdgeInsets.all(8.0),
+                        decoration: BoxDecoration(
+                          color: Colors.black12,
+                          borderRadius: BorderRadius.circular(10.0),
+                        ),
+                        child: Text(
+                          "4 People ",
+                          style: TextStyle(
+                            color: Colors.white,
+                            fontWeight: FontWeight.bold,
+                          ),
+                        ),
+                      ),
+                    ],
+                  ),
+                ),
+              ],
+            ),
+
+
+            Padding(
+
+
+              padding: const EdgeInsets.all(20),
+              child: Container(
+
+                height: 30,
+                decoration: const BoxDecoration(
+                  color: Color(0xFFFF4D77D), // set the color of the container
+                  borderRadius: BorderRadius.all(Radius.circular(10)), // set the border radius
+                ),
+
+
+                child: Row(
+                  mainAxisAlignment: MainAxisAlignment.center,
+
+                  children: [
+
+                    Text(
+                      subsubcategory.name,
+
+                      style: const TextStyle(fontSize: 20, fontWeight: FontWeight.bold,
+                          letterSpacing: 3.0, backgroundColor: Color(0xFFF4D67C)),
+
+                    ),
+                    SizedBox(width: 10),
+
+                      Icon(Icons.favorite),
+                    SizedBox(width: 20),
+                    Icon(Icons.content_paste),
+
+
+
+                  ],
+                ),
+              ),
+            ),
+
+
+            // Card(
+            //
+            //   color: Color(0xFFF4D67C),
+            //   child: SingleChildScrollView(
+            //     child: Column(
+            //       children: [
+            //         Text("Yemek Tarifi"),
+            //         Padding(
+            //           padding: const EdgeInsets.all(8.0),
+            //           child: Text(
+            //               "Kıymalı lahana sarması yapmaya lahanaları haşlamakla başlayalım  "
+            //                   "Lahana sarması iç harcı nasıl hazırlanır?  yemeklik doğranmış soğan, yıkanmış pirinç, kıyma , domates ve biber salçası, tuz, karabiber, pulbiber, pilavlık bulgur, zeytinyağı ve suyu uygun bir kapta iyice karıştıralım "
+            //
+            //           ),
+            //         ),
+            //       ],
+            //     ),
+            //   ),
+            // ),
+
+
+
+          Expanded(child:    ListView.builder(
+
+    itemBuilder: (context, index) {
+      itemCount: subsubcategory.subsubsubcategories.length;
+      SubSubSubcategory subsubsubcategory = subsubcategory.subsubsubcategories[index];
+
+
+    return Card(
+      color: const Color(0xFFF4D67C), // Card rengi
+    shape: RoundedRectangleBorder(
+    borderRadius: BorderRadius.circular(10.0),
+    ),
+    elevation: 5.0, // Gölge kalınlığı
+    child: SizedBox(
+    width: double.infinity,
+      height: 300.0,// Card genişliği
+    child: Column(
+    children: <Widget>[
+
+    ListTile(
+    title: Text("Instructions",textAlign: TextAlign.center), // Card başlığı
+    subtitle: Text('Kemiksiz olarak satın aldığınız fileto tavuk göğsünü tavuk şiş hazırlamak için iri küpler halinde kesin.En az 20 dakika marinasyon karışımında beklettiğiniz tavuk parçalarını, bir tavuk, bir arpacık soğan dilimi, bir kırmızı biber parçası olmak üzere tahta şişlere dizin Bütün olarak ya da servis tabağına tahta şişlerinden sıyırdığınız '),
+
+    ),
+  //  Divider(),
+       Text(subsubsubcategory.yemekTarifleri1[index]),
+
+    ],
+    ),
+    ),
+    );
+    },
+    ),
+          ),
+
+
+
+//---
+
+
+            Expanded(
+  child:  Center(
+    child: SizedBox(
+    height: 300.0, // Card yüksekliği
+    width: 1000,
+child: Scrollbar(
+
+
+              child: Padding(
+                padding: const EdgeInsets.symmetric(horizontal: 20.0),  // add 20.0 pixels of padding to the left and right sides
+                child: GridView.builder(
+                  itemCount: subsubcategory.subsubsubcategories.length,
+
+                  gridDelegate: SliverGridDelegateWithMaxCrossAxisExtent(
+                    childAspectRatio: 3 / 2,
+                    maxCrossAxisExtent: 200,
+                    mainAxisSpacing: 20,
+                    crossAxisSpacing: 20,
+                  ),
+                  itemBuilder: (context, index) {
+                    SubSubSubcategory subsubsubcategory = subsubcategory.subsubsubcategories[index];
+
+                   return Card(
+
+                      color: const Color(0xFFF4D67C),
+
+                      elevation: 4.0,
+                      shape: RoundedRectangleBorder(
+                        borderRadius: BorderRadius.circular(10.0),
+                      ),
+
+
+                      child: ListTile(
+
+                       // contentPadding: EdgeInsets.symmetric(horizontal: 30),
+                        title: Column(
+                          mainAxisSize: MainAxisSize.min,
+
+                         // mainAxisAlignment: MainAxisAlignment.center,
+                          children: <Widget>[
+                            Row(
+                            mainAxisAlignment: MainAxisAlignment.end,
+                              children: const <Widget>[
+                                // Icon(
+                                //   Icons.star,
+                                //   color: Colors.yellow,
+                                // ),
+
+                              ],
+                            ),
+                            //Image.asset(subsubsubcategory.image),
+                            Expanded(
+                              child: Container(
+                                // Kutu çerçevesi
+                                decoration: BoxDecoration(
+
+                                ),
+                                child: ListView.builder(
+                                  itemCount: subsubsubcategory.yemekTarifleri.length,
+                                  itemBuilder: (context, index) {
+
+                                    return Padding(
+                                      // Kutu içindeki elemanlar arası boşluk
+                                      padding: const EdgeInsets.all(1.5),
+
+                                      child: Text(subsubsubcategory.yemekTarifleri[index]),
+                                    );
+                                  },
+                                ),
+                              ),
+                            ),
+
+                            // Padding(
+                            //
+                            //   padding: EdgeInsets.symmetric(vertical: 0),
+                            //
+                            //   child:
+                            //
+                            //   Text(subsubsubcategory.yemekTarifleri[index], textAlign: TextAlign.left,
+                            //   ),
+                            // ),
+                          ],
+                        ),
+
+                        onTap: () {
+                          Navigator.of(context).push(
+                            MaterialPageRoute(
+                              builder: (context) => IngredientsPage(subsubcategory: subsubcategory),)
+                          );
+                        },
+
+                      ),
+                    );
+                  },
+                ),
+              ),
+              ),
+            ),
+  ),),
+          ],
+        ),
+      ),
       ),
     );
   }
@@ -724,5 +1446,20 @@ class SubSubcategory {
   final String name;
   final String image;
 
-  SubSubcategory({required this.id, required this.name, required this.image});
+  final List<SubSubSubcategory> subsubsubcategories;
+ SubSubcategory({required this.id, required this.name, required this.image,required this.subsubsubcategories});
+
+  }
+
+
+class SubSubSubcategory {
+  final int id;
+  final String name;
+  final String image;
+  List<String> yemekTarifleri;
+  List<String> yemekTarifleri1;
+
+  SubSubSubcategory({required this.id, required this.name,required this.yemekTarifleri, required this.yemekTarifleri1,required this.image});
+
+
 }

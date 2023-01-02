@@ -1,3 +1,5 @@
+
+import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
 import 'package:google_nav_bar/google_nav_bar.dart';
 import 'package:recipe/UserWidget.dart';
@@ -14,7 +16,7 @@ class Navigotor extends StatefulWidget{
 
 class _NavigotorState extends State<Navigotor>{
   int _currentIndex =0;
-  late final Category category;
+
   List<Widget> listOption = <Widget>[HomeScreen(),CategoriesPage(),favorites(),UserWidget()];
   @override
   Widget build(BuildContext context){

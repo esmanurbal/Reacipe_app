@@ -13,6 +13,10 @@ class HomeScreen extends StatefulWidget{
 class _HomeScreenState extends State<HomeScreen>{
   @override
   Widget build(BuildContext context){
+
+    debugShowCheckedModeBanner: false;
+
+
     return Scaffold(
         body:
         Container(
