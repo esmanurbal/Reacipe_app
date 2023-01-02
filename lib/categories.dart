@@ -1222,43 +1222,29 @@ isAlwaysShown: true,
                   ),
                 ),
 
-
-
-            Padding(
-
-
-              padding: const EdgeInsets.all(20),
-              child: Container(
-
-                height: 50,
-                decoration: const BoxDecoration(
-                  color: Color.fromARGB(200, 255, 236, 96), // set the color of the container
-                  borderRadius: BorderRadius.all(Radius.circular(10)), // set the border radius
-                ),
-
-
-                child: Row(
-                  children: [
-                    Column(
-                      crossAxisAlignment: CrossAxisAlignment.start,
+                Padding(
+                  padding: const EdgeInsets.all(20),
+                  child: Container(
+                    width:100,
+                    height: 30,
+                    decoration: const BoxDecoration(
+                      color: Color.fromARGB(200, 255, 236, 96), // set the color of the container
+                      borderRadius: BorderRadius.all(Radius.circular(10)), // set the border radius
+                    ),
+                    child: Row(
+                      mainAxisAlignment: MainAxisAlignment.center,
                       children: [
-                      Container(
-
-                    child: const Text.rich(
-                      TextSpan(
-                          children: [
-                          TextSpan(text: "Ingredients", style: TextStyle(fontWeight: FontWeight.w600, fontSize: 25,)),
-                    ]
+                        Text(
+                          "Ingredients",
+                          style: const TextStyle(fontSize: 20, fontWeight: FontWeight.bold, letterSpacing: 3.0, backgroundColor: Color(0xFFF4D67C)),
+                        ),
+                      ],
                     ),
-                    ),
-
-            ),
-                ],
+                  ),
                 ),
-                ]
-              ),
-            ),  ),]),
-              Expanded(
+
+
+                Expanded(
                 child:ListView.builder(
               itemBuilder: (context, index) {
                 itemCount: subsubcategory.subsubsubcategories.length;
