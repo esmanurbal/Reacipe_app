@@ -2,12 +2,16 @@ import 'package:flutter/material.dart';
 import 'package:recipe/components/constant.dart';
 import 'package:recipe/screens/NotificationScreen.dart';
 import 'package:recipe/Ingredients.dart';
+import 'package:recipe/components/constant.dart';
 
 
 import 'IngredientsScreen.dart';
 
 class CategoriesPage extends StatefulWidget {
   const CategoriesPage({super.key});
+
+
+
 
   @override
   _CategoriesPageState createState() => _CategoriesPageState();
@@ -642,11 +646,7 @@ class _CategoriesPageState extends State<CategoriesPage> {
                 ),
               ),),
 
-            const SizedBox(
-                height: 30),
-
-
-              Padding(
+      Padding(
                   padding: const EdgeInsets.symmetric(horizontal: 40,vertical: 20),
                   child: Align(
                     alignment: Alignment.topRight,
@@ -885,6 +885,7 @@ class SubSubcategoriesPage extends StatefulWidget{
   @override
   _SubSubcategoriesPage createState() => _SubSubcategoriesPage(key: UniqueKey(), subcategory: this.subcategory);
 
+
 }
 
 class _SubSubcategoriesPage extends State<SubSubcategoriesPage> {
@@ -978,7 +979,10 @@ class _SubSubcategoriesPage extends State<SubSubcategoriesPage> {
                   decoration: InputDecoration(
                     border: InputBorder.none,
                     prefixIcon: Icon(Icons.search,color: Colors.black),
+
                     hintText: 'What do you want to cook today?',
+
+
                   ),
                 ),
               ),
@@ -1033,13 +1037,7 @@ class _SubSubcategoriesPage extends State<SubSubcategoriesPage> {
                           );
                         },
 
-                         // onTap: () {
-                         //    Navigator.of(context).push(
-                         //      MaterialPageRoute(
-                         //        builder: (context) => IngredientsScreen(: meal_data),
-                         //      ),
-                         //    );
-                         //  }
+                     
 
                       ),
                     );
@@ -1055,8 +1053,7 @@ class _SubSubcategoriesPage extends State<SubSubcategoriesPage> {
 }
 class SubSubSubcategoriesPage extends StatelessWidget {
   final SubSubcategory subsubcategory;
- // bool showRecipeCard = false;
- // bool showIngredientsCard = false;
+
   final ScrollController _controller = ScrollController();
 
   SubSubSubcategoriesPage({required Key key,required this.subsubcategory}) : super(key: key);
@@ -1388,13 +1385,14 @@ child: Scrollbar(
                             // ),
                           ],
                         ),
-                        // onTap: () {
-                        //    Navigator.of(context).push(
-                        //      MaterialPageRoute(
-                        //        builder: (context) => IngredientsScreen(: meal_data),
-                        //      ),
-                        //    );
-                        //  }
+
+                        onTap: () {
+                          Navigator.of(context).push(
+                            MaterialPageRoute(
+                              builder: (context) => IngredientsPage(subsubcategory: subsubcategory),)
+                          );
+                        },
+
                       ),
                     );
                   },
