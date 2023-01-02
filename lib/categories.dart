@@ -1268,42 +1268,13 @@ isAlwaysShown: true,
                 ]
             ),
             Expanded(
-                child:ListView.builder(
-                  itemBuilder: (context, index) {
-                    subsubcategory.subsubsubcategories.length;
-                    SubSubSubcategory subsubsubcategory = subsubcategory.subsubsubcategories[index];
-                    return Card(
-                      color: const Color(0xFFF4D67C), // Card rengi
-                      shape: RoundedRectangleBorder(
-                      borderRadius: BorderRadius.circular(30.0),
-                      ),
-                      elevation: 5.0,
-                      child: SizedBox(
-                        width: double.infinity,
-                        height: 300.0,
-                        child: Column(
-                          children: <Widget>[
-                            const SizedBox(height: 30,),
-                            const ListTile(
-                              title: Text("İngredients",textAlign: TextAlign.center), // Card başlığı
-
-                         ),
-                            Text(subsubsubcategory.yemekTarifleri1[index]),
-                          ],
-                        ),
-                      ),
-                    );
-                    },
-                ),
-            ),
-            Expanded(
               child:Center(
                 child: SizedBox(
                   height: 300.0,
                   width: 1000,
                   child: Scrollbar(
                     child: Padding(
-                      padding: const EdgeInsets.symmetric(horizontal: 20.0),  // add 20.0 pixels of padding to the left and right sides
+                      padding: const EdgeInsets.symmetric(horizontal: 0.0),  // add 20.0 pixels of padding to the left and right sides
                           child: GridView.builder(
                             itemCount: subsubcategory.subsubsubcategories.length,
 
@@ -1324,42 +1295,38 @@ isAlwaysShown: true,
                                 child: ListTile(
 
                        // contentPadding: EdgeInsets.symmetric(horizontal: 30),
-                        title: Column(
-                          mainAxisSize: MainAxisSize.min,
+                                      title: Column(
+                                        mainAxisSize: MainAxisSize.min,
 
                          // mainAxisAlignment: MainAxisAlignment.center,
-                          children: <Widget>[
-                            Row(
-                            mainAxisAlignment: MainAxisAlignment.end,
-                              children: const <Widget>[
-                                // Icon(
-                                //   Icons.star,
-                                //   color: Colors.yellow,
-                                // ),
+                                          children: <Widget>[
+                                            Row(
+                                            mainAxisAlignment: MainAxisAlignment.end,
+                                              children: const <Widget>[
+                                                // Icon(
+                                                //   Icons.star,
+                                                //   color: Colors.yellow,
+                                                // ),
 
-                              ],
-                            ),
-                            //Image.asset(subsubsubcategory.image),
-                            Expanded(
-                              child: Container(
-                                // Kutu çerçevesi
-                                decoration: BoxDecoration(
+                                              ],
+                                            ),
 
-                                ),
-                                child: ListView.builder(
-                                  itemCount: subsubsubcategory.yemekTarifleri.length,
-                                  itemBuilder: (context, index) {
 
-                                    return Padding(
-                                      // Kutu içindeki elemanlar arası boşluk
-                                      padding: const EdgeInsets.all(1.5),
+                                            Expanded(
+                                              child: Container(
+                                                  child: ListView.builder(
+                                                    itemCount: subsubsubcategory.yemekTarifleri.length,
+                                                    itemBuilder: (context, index) {
+                                                      return Padding(
+                                                        // Kutu içindeki elemanlar arası boşluk
+                                                        padding: const EdgeInsets.all(1.5),
 
-                                      child: Text(subsubsubcategory.yemekTarifleri[index]),
-                                    );
-                                  },
-                                ),
-                              ),
-                            ),
+                                                        child: Text(subsubsubcategory.yemekTarifleri[index]),
+                                                      );
+                                                    },
+                                                  ),
+                                                ),
+                                              ),
 
                             // Padding(
                             //
