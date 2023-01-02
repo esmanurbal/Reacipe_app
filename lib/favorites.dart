@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
-import 'package:myfirstproject/colors.dart';
-import 'color.dart';
-import 'constant.dart';
+import 'package:recipe/components/color.dart';
+import 'package:recipe/components/constant.dart';
+
 class favorites extends StatefulWidget {
   const favorites({Key? key}) : super(key: key);
   @override
@@ -72,7 +72,7 @@ class _favoritesState extends State<favorites> {
                   width: 378,
                   height: 149,
                   decoration: BoxDecoration(
-                    image: DecorationImage(
+                    image: const DecorationImage(
                       alignment: Alignment.centerLeft,
                       matchTextDirection: true,
                       repeat: ImageRepeat.noRepeat,

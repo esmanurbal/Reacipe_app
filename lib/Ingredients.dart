@@ -1,11 +1,11 @@
 
 import 'package:flutter/material.dart';
-import 'package:recipe/screens/categories.dart';
+import 'package:recipe/categories.dart';
 
 class IngredientsPage extends StatelessWidget {
   final SubSubcategory subsubcategory;
 
-  IngredientsPage({required this.subsubcategory});
+  const IngredientsPage({required this.subsubcategory});
 
   @override
   Widget build(BuildContext context) {
