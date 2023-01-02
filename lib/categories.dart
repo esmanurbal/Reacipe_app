@@ -1221,8 +1221,7 @@ isAlwaysShown: true,
                     ],
                   ),
                 ),
-              ],
-            ),
+
 
 
             Padding(
@@ -1258,55 +1257,51 @@ isAlwaysShown: true,
                 ),
                 ]
               ),
-            ),
+            ),  ),]),
+              Expanded(
+                child:ListView.builder(
+              itemBuilder: (context, index) {
+                itemCount: subsubcategory.subsubsubcategories.length;
+                SubSubSubcategory subsubsubcategory = subsubcategory.subsubsubcategories[index];
+                  return Card(
+                    color: const Color(0xFFF4D67C), // Card rengi
+                  shape: RoundedRectangleBorder(
+                  borderRadius: BorderRadius.circular(10.0),
+                  ),
+                  elevation: 5.0, // Gölge kalınlığı
+                  child: SizedBox(
+                  width: double.infinity,
+                    height: 300.0,// Card genişliği
+                  child: Column(
+                  children: <Widget>[
 
+                      ListTile(
+                      title: Text("Instructions",textAlign: TextAlign.center), // Card başlığı
+                      subtitle: Text('Kemiksiz olarak satın aldığınız fileto tavuk göğsünü tavuk şiş hazırlamak için iri küpler halinde kesin.En az 20 dakika marinasyon karışımında beklettiğiniz tavuk parçalarını, bir tavuk, bir arpacık soğan dilimi, bir kırmızı biber parçası olmak üzere tahta şişlere dizin Bütün olarak ya da servis tabağına tahta şişlerinden sıyırdığınız '),
 
-              Expanded(child:    ListView.builder(
+                         ),
+                          //  Divider(),
+                               Text(subsubsubcategory.yemekTarifleri1[index]),
 
-    itemBuilder: (context, index) {
-      itemCount: subsubcategory.subsubsubcategories.length;
-      SubSubSubcategory subsubsubcategory = subsubcategory.subsubsubcategories[index];
-
-
-            return Card(
-          color: const Color(0xFFF4D67C), // Card rengi
-        shape: RoundedRectangleBorder(
-        borderRadius: BorderRadius.circular(10.0),
-        ),
-        elevation: 5.0, // Gölge kalınlığı
-        child: SizedBox(
-        width: double.infinity,
-          height: 300.0,// Card genişliği
-        child: Column(
-        children: <Widget>[
-
-        ListTile(
-        title: Text("Instructions",textAlign: TextAlign.center), // Card başlığı
-        subtitle: Text('Kemiksiz olarak satın aldığınız fileto tavuk göğsünü tavuk şiş hazırlamak için iri küpler halinde kesin.En az 20 dakika marinasyon karışımında beklettiğiniz tavuk parçalarını, bir tavuk, bir arpacık soğan dilimi, bir kırmızı biber parçası olmak üzere tahta şişlere dizin Bütün olarak ya da servis tabağına tahta şişlerinden sıyırdığınız '),
-
-        ),
-      //  Divider(),
-           Text(subsubsubcategory.yemekTarifleri1[index]),
-
-        ],
-        ),
-        ),
-        );
-        },
-        ),
-              ),
+                            ],
+                            ),
+                            ),
+                            );
+                            },
+                            ),
+                                  ),
 
 
 
 //---
 
 
-            Expanded(
-  child:  Center(
-    child: SizedBox(
-    height: 300.0, // Card yüksekliği
-    width: 1000,
-child: Scrollbar(
+                        Expanded(
+                                child:  Center(
+                                  child: SizedBox(
+                                  height: 300.0, // Card yüksekliği
+                                  width: 1000,
+                              child: Scrollbar(
 
 
               child: Padding(
