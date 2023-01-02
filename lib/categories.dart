@@ -428,6 +428,7 @@ class _SubCategoriesPageState extends State<SubCategoriesPage> {
                   ],
                 ),
               ),),
+
               Padding(
                   padding: const EdgeInsets.symmetric(horizontal: 40,vertical: 20),
                   child: Align(
@@ -446,13 +447,26 @@ class _SubCategoriesPageState extends State<SubCategoriesPage> {
 
                     ),
                   )
-              )],),
+              ),
+              Padding(
+                padding: const EdgeInsets.only(top:64,left:30),
+                child: Row(
+                    mainAxisAlignment: MainAxisAlignment.start,
+                    children: [
+                      GestureDetector(
+                        onTap: () {
+                          Navigator.pop(context); // pop the current page from the navigation stack
+                        },
+                        child: Icon(Icons.arrow_back), // narrow icon
+                      ),] ),),
+            ],
+            ),
 
             const SizedBox(
                 height: 10
             ),
             Padding(
-              padding: const EdgeInsets.symmetric(vertical: 10, horizontal: 20),
+              padding: const EdgeInsets.symmetric(vertical: 0, horizontal: 20),
               child: Container(
                 decoration: BoxDecoration(
                     borderRadius: BorderRadius.circular(20),
