@@ -1286,7 +1286,9 @@ isAlwaysShown: true,
                   width: 1000,
                   child: Scrollbar(
                     child: Padding(
+
                       padding: const EdgeInsets.symmetric(horizontal: 50.0),  // add 20.0 pixels of padding to the left and right sides
+
                           child: GridView.builder(
                             itemCount: subsubcategory.subsubsubcategories.length,
 
@@ -1307,39 +1309,35 @@ isAlwaysShown: true,
                                 child: ListTile(
 
                        // contentPadding: EdgeInsets.symmetric(horizontal: 30),
-                        title: Column(
-                          mainAxisSize: MainAxisSize.min,
+                                      title: Column(
+                                        mainAxisSize: MainAxisSize.min,
 
-                         // mainAxisAlignment: MainAxisAlignment.center,
+
                           children: <Widget>[
                             Row(
                             mainAxisAlignment: MainAxisAlignment.end,
                               children: const <Widget>[
 
 
-                              ],
-                            ),
-                            //Image.asset(subsubsubcategory.image),
-                            Expanded(
-                              child: Container(
-                                // Kutu çerçevesi
-                                decoration: BoxDecoration(
+                                              ],
+                                            ),
 
-                                ),
-                                child: ListView.builder(
-                                  itemCount: subsubsubcategory.yemekTarifleri.length,
-                                  itemBuilder: (context, index) {
 
-                                    return Padding(
-                                      // Kutu içindeki elemanlar arası boşluk
-                                      padding: const EdgeInsets.all(1.5),
+                                            Expanded(
+                                              child: Container(
+                                                  child: ListView.builder(
+                                                    itemCount: subsubsubcategory.yemekTarifleri.length,
+                                                    itemBuilder: (context, index) {
+                                                      return Padding(
+                                                        // Kutu içindeki elemanlar arası boşluk
+                                                        padding: const EdgeInsets.all(1.5),
 
-                                      child: Text(subsubsubcategory.yemekTarifleri[index]),
-                                    );
-                                  },
-                                ),
-                              ),
-                            ),
+                                                        child: Text(subsubsubcategory.yemekTarifleri[index]),
+                                                      );
+                                                    },
+                                                  ),
+                                                ),
+                                              ),
 
 
                           ],
