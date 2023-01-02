@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:recipe/components/color.dart';
 import 'package:recipe/components/constant.dart';
+import 'package:recipe/components/navigator.dart';
 
 class favorites extends StatefulWidget {
   const favorites({Key? key}) : super(key: key);
@@ -48,10 +49,14 @@ class _favoritesState extends State<favorites> {
                     child: Row(
                       mainAxisAlignment: MainAxisAlignment.start,
                       children: [
-                        IconButton(
-                          icon: const Icon(Icons.arrow_back),
-                          onPressed: () { Navigator.pop(context);
-                          }, ),
+                        GestureDetector(
+                          onTap: () {
+                            Navigator.of(context).push(
+                              MaterialPageRoute(
+                                  builder: (context) => const Navigotor()),); // pop the current page from the navigation stack
+                          },
+                          child: Icon(Icons.arrow_back), // narrow icon
+                        ),
                         Expanded(
                           child: Align(
                               alignment: Alignment.centerLeft,
@@ -76,7 +81,7 @@ class _favoritesState extends State<favorites> {
                       alignment: Alignment.centerLeft,
                       matchTextDirection: true,
                       repeat: ImageRepeat.noRepeat,
-                      image: AssetImage("assets/img_2.png"),
+                      image: AssetImage("assets/images/img_2.png"),
                     ),
                     color:const Color.fromARGB(200,244, 233, 173,),
                     borderRadius: BorderRadius.circular(30.0),
@@ -95,7 +100,7 @@ class _favoritesState extends State<favorites> {
                    alignment: Alignment.centerLeft,
                    matchTextDirection: true,
                    repeat: ImageRepeat.noRepeat,
-                   image: AssetImage("assets/img_3.png"),
+                   image: AssetImage("assets/images/img_3.png"),
                     ),
                     color:const Color.fromARGB(200,244, 233, 173,),
                     borderRadius: BorderRadius.circular(30.0),
@@ -113,7 +118,7 @@ class _favoritesState extends State<favorites> {
                       alignment: Alignment.centerLeft,
                       matchTextDirection: true,
                       repeat: ImageRepeat.noRepeat,
-                      image: AssetImage("assets/img_4.png"),
+                      image: AssetImage("assets/images/img_4.png"),
                     ),
                     color:const Color.fromARGB(200,244, 233, 173,),
                     borderRadius: BorderRadius.circular(30.0),
