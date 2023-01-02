@@ -21,7 +21,7 @@ version: 1.0.0+1
 
 environment:
 
-  sdk: '2.18.4'
+  sdk: '2.18.6'
 
 
 

@@ -1172,7 +1172,7 @@ isAlwaysShown: true,
                   //child: Image.asset("resim.jpg"),
                   child:Image.asset(subsubcategory.image,width:200,height:200),
                 ),
-                SizedBox(height: 1),
+                const SizedBox(height: 1),
                 Container(
                   width: 203,
                   height: 125,
@@ -1185,8 +1185,6 @@ isAlwaysShown: true,
                     mainAxisSize: MainAxisSize.min,
                     children: [
                       Container(
-
-
                         child: Column
                           (children: const[
                           SizedBox(width: 10,height: 20,),
@@ -1221,12 +1219,7 @@ isAlwaysShown: true,
                     ],
                   ),
                 ),
-
-
-
             Padding(
-
-
               padding: const EdgeInsets.all(20),
               child: Container(
 
@@ -1236,99 +1229,95 @@ isAlwaysShown: true,
                   borderRadius: BorderRadius.all(Radius.circular(10)), // set the border radius
                 ),
 
-
-                child: Row(
-                  children: [
-                    Column(
-                      crossAxisAlignment: CrossAxisAlignment.start,
-                      children: [
-                      Container(
-
-                    child: const Text.rich(
-                      TextSpan(
-                          children: [
-                          TextSpan(text: "Ingredients", style: TextStyle(fontWeight: FontWeight.w600, fontSize: 25,)),
-                    ]
-                    ),
-                    ),
+            ),
 
             ),
-                ],
+              ]
+            ),
+            Row(children: [
+              Expanded(child:Container(
+                width: 397.53,
+                height: 58.53,
+                decoration: BoxDecoration(
+                  color: const Color.fromARGB(100,249,215 ,129),
+                  borderRadius: BorderRadius.circular(30.0),
                 ),
-                ]
-              ),
-            ),  ),]),
-              Expanded(
-                child:ListView.builder(
-              itemBuilder: (context, index) {
-                itemCount: subsubcategory.subsubsubcategories.length;
-                SubSubSubcategory subsubsubcategory = subsubcategory.subsubsubcategories[index];
-                  return Card(
-                    color: const Color(0xFFF4D67C), // Card rengi
-                  shape: RoundedRectangleBorder(
-                  borderRadius: BorderRadius.circular(10.0),
-                  ),
-                  elevation: 5.0, // Gölge kalınlığı
-                  child: SizedBox(
-                  width: double.infinity,
-                    height: 300.0,// Card genişliği
-                  child: Column(
-                  children: <Widget>[
+                child:Column(
+                    children:const [
+                    Padding(padding: const EdgeInsets.only(top:15,right: 150),
+                      child:Text.rich(
+                        TextSpan(
+                          children: [
+                            TextSpan(text: "Ingredients: ", style: TextStyle(fontWeight: FontWeight.w600, fontSize: 15)),
+                            TextSpan(text: "\n"), // adds a newline
+                            TextSpan(text: "Instructions: ", style: TextStyle(fontWeight: FontWeight.w600, fontSize: 15)),
+                          ],
+                        ),
+                      )
 
-                      ListTile(
-                      title: Text("Instructions",textAlign: TextAlign.center), // Card başlığı
-                      subtitle: Text('Kemiksiz olarak satın aldığınız fileto tavuk göğsünü tavuk şiş hazırlamak için iri küpler halinde kesin.En az 20 dakika marinasyon karışımında beklettiğiniz tavuk parçalarını, bir tavuk, bir arpacık soğan dilimi, bir kırmızı biber parçası olmak üzere tahta şişlere dizin Bütün olarak ya da servis tabağına tahta şişlerinden sıyırdığınız '),
+                    )
+                    ]
+                ),
+
+              ),),
+
+                ]
+            ),
+            Expanded(
+                child:ListView.builder(
+                  itemBuilder: (context, index) {
+                    subsubcategory.subsubsubcategories.length;
+                    SubSubSubcategory subsubsubcategory = subsubcategory.subsubsubcategories[index];
+                    return Card(
+                      color: const Color(0xFFF4D67C), // Card rengi
+                      shape: RoundedRectangleBorder(
+                      borderRadius: BorderRadius.circular(10.0),
+                      ),
+                      elevation: 5.0,
+                      child: SizedBox(
+                        width: double.infinity,
+                        height: 300.0,
+                        child: Column(
+                          children: <Widget>[
+                            const SizedBox(height: 30,),
+                            const ListTile(
+                              title: Text("Instructions",textAlign: TextAlign.center), // Card başlığı
 
                          ),
-                          //  Divider(),
-                               Text(subsubsubcategory.yemekTarifleri1[index]),
-
-                            ],
-                            ),
-                            ),
-                            );
-                            },
-                            ),
-                                  ),
-
-
-
-//---
-
-
-                        Expanded(
-                                child:  Center(
-                                  child: SizedBox(
-                                  height: 300.0, // Card yüksekliği
-                                  width: 1000,
-                              child: Scrollbar(
-
-
-              child: Padding(
-                padding: const EdgeInsets.symmetric(horizontal: 20.0),  // add 20.0 pixels of padding to the left and right sides
-                child: GridView.builder(
-                  itemCount: subsubcategory.subsubsubcategories.length,
-
-                  gridDelegate: SliverGridDelegateWithMaxCrossAxisExtent(
-                    childAspectRatio: 3 / 2,
-                    maxCrossAxisExtent: 200,
-                    mainAxisSpacing: 20,
-                    crossAxisSpacing: 20,
-                  ),
-                  itemBuilder: (context, index) {
-                    SubSubSubcategory subsubsubcategory = subsubcategory.subsubsubcategories[index];
-
-                   return Card(
-
-                      color: const Color(0xFFF4D67C),
-
-                      elevation: 4.0,
-                      shape: RoundedRectangleBorder(
-                        borderRadius: BorderRadius.circular(10.0),
+                            Text(subsubsubcategory.yemekTarifleri1[index]),
+                          ],
+                        ),
                       ),
+                    );
+                    },
+                ),
+            ),
+            Expanded(
+              child:Center(
+                child: SizedBox(
+                  height: 300.0,
+                  width: 1000,
+                  child: Scrollbar(
+                    child: Padding(
+                      padding: const EdgeInsets.symmetric(horizontal: 20.0),  // add 20.0 pixels of padding to the left and right sides
+                          child: GridView.builder(
+                            itemCount: subsubcategory.subsubsubcategories.length,
 
-
-                      child: ListTile(
+                                  gridDelegate: const SliverGridDelegateWithMaxCrossAxisExtent(
+                                    childAspectRatio: 3 / 2,
+                                    maxCrossAxisExtent: 200,
+                                    mainAxisSpacing: 20,
+                                    crossAxisSpacing: 20,
+                                  ),
+                            itemBuilder: (context, index) {
+                              SubSubSubcategory subsubsubcategory = subsubcategory.subsubsubcategories[index];
+                              return Card(
+                                color: const Color(0xFFF4D67C),
+                                elevation: 4.0,
+                                    shape: RoundedRectangleBorder(
+                                      borderRadius: BorderRadius.circular(10.0),
+                                    ),
+                                child: ListTile(
 
                        // contentPadding: EdgeInsets.symmetric(horizontal: 30),
                         title: Column(
