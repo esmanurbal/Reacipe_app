@@ -1077,30 +1077,6 @@ class SubSubSubcategoriesPage extends StatelessWidget {
 
     return Scaffold(
 
-      appBar: AppBar(
-        backgroundColor: Color(0xFFFF4D77D),
-
-        actions: [
-        IconButton(
-          icon: Icon(Icons.notifications),
-          onPressed: () {
-            // Zil iconu tıklandığında çalıştırılacak kod bloğu
-          },
-        ),
-    IconButton(
-    icon: Icon(Icons.restaurant),
-    onPressed: () {
-    }
-    ),
-
-      ],
-        title: Text("Recipes"),
-      ),
-
-
-
-
-
       body:RawScrollbar(
         thumbColor: Colors.blue,
         radius: Radius.circular(20),
@@ -1121,21 +1097,69 @@ isAlwaysShown: true,
             const SizedBox(
                 height: 5.0
             ),
-            // Padding(
-            //   padding: const EdgeInsets.symmetric(vertical: 30, horizontal: 10),
-            //   child: Container(
-            //     decoration: BoxDecoration(
-            //         borderRadius: BorderRadius.circular(20),
-            //         color: Colors.grey[200]),
-            //     child: const TextField(
-            //       decoration: InputDecoration(
-            //         border: InputBorder.none,
-            //         prefixIcon: Icon(Icons.search,color: Colors.black),
-            //         hintText: ' Yemek Ara',
-            //       ),
-            //     ),
-            //   ),
-            // ),
+            Stack(children: [Padding(padding: const EdgeInsets.only(top: 20, left: 30),
+              child:
+              Text.rich(
+                TextSpan(
+                  children: [
+                    const TextSpan(text: "R", style: TextStyle(fontWeight: FontWeight.w600, fontSize: 25,color: Color.fromARGB(200, 154,6,24))),
+                    const TextSpan(text: "E", style: TextStyle(fontWeight: FontWeight.w600, fontSize: 25,color: Color.fromARGB(200,154,6,24))),
+                    const TextSpan(text: "C", style: TextStyle(fontWeight: FontWeight.w600, fontSize: 25,color: Color.fromARGB(200,235,23,49))),
+                    TextSpan(children:[WidgetSpan(child: Image.asset(recipeGif,height:50,width:50,)),]),
+                    const TextSpan(text: "P", style: TextStyle(fontWeight: FontWeight.w600, fontSize: 25,color: Color.fromARGB(200,87,4,14))),
+                    const TextSpan(text: "E", style: TextStyle(fontWeight: FontWeight.w600, fontSize: 25,color: Color.fromARGB(200,87,4,14))),
+                  ],
+                ),
+              ),),
+              Padding(
+                  padding: const EdgeInsets.symmetric(horizontal: 40,vertical: 30),
+                  child: Align(
+                    alignment: Alignment.topRight,
+                    child: GestureDetector(
+                      onTap: () {
+                        // Navigate to the notification.dart field
+                        Navigator.of(context).push(
+                          MaterialPageRoute(
+                              builder: (context) => NotificationScreen()),);
+                      },
+                      child: const Icon(
+                        Icons.notifications_none,
+                        size: 30,
+                      ),
+                    ),
+                  )
+              )],),
+            Padding(
+              padding: const EdgeInsets.symmetric(horizontal: 10),
+              child: Container(
+                height: 50,
+                decoration: const BoxDecoration(
+                  color: Color(0xFFFF4D77D), // set the color of the container
+                  borderRadius: BorderRadius.all(Radius.circular(10)), // set the border radius
+                ),
+                child: Row(
+                  mainAxisAlignment: MainAxisAlignment.start,
+                  children: [
+                    GestureDetector(
+                      onTap: () {
+                        Navigator.pop(context); // pop the current page from the navigation stack
+                      },
+                      child: Icon(Icons.arrow_back), // narrow icon
+                    ),
+                    Padding(
+                      padding: const EdgeInsets.symmetric(horizontal: 70),
+                      child: Text(
+                        subsubcategory.name,
+                        style:const TextStyle(fontSize: 24,
+                          fontWeight:
+                          FontWeight.bold,
+                          backgroundColor: Color(0xFFF4D67C),
+                        ),),)
+                  ],
+                ),
+              ),
+            ),
+
             SizedBox(height: 0),
             Row(
 
@@ -1150,63 +1174,49 @@ isAlwaysShown: true,
                 ),
                 SizedBox(height: 1),
                 Container(
-                  margin: EdgeInsets.only(bottom: 4.0),
+                  width: 203,
+                  height: 125,
+                  margin: EdgeInsets.only(bottom: 10.0),
                   decoration: BoxDecoration(
-                    color: Color(0xFFF4D67C),
+                    color: Color.fromARGB(200, 243, 223, 223),
                     borderRadius: BorderRadius.circular(20.0),
                   ),
                   child: Column(
                     mainAxisSize: MainAxisSize.min,
                     children: [
                       Container(
-                        margin: EdgeInsets.all(8.0),
 
-                        padding: EdgeInsets.all(8.0),
-                        decoration: BoxDecoration(
-                          color: Colors.lightBlue,
-                          borderRadius: BorderRadius.circular(10.0),
-                        ),
-                        child: Text(
-                          "300 Kcal",
+
+                        child: Column
+                          (children: const[
+                          SizedBox(width: 10,height: 20,),
+                            Text(
+                          "Calorie: 300 Kcal",
                           style: TextStyle(
-                            color: Colors.white,
+                            color: Colors.black,
                             fontWeight: FontWeight.bold,
                           ),
                         ),
-                      ),
-
-
-                      Container(
-
-                        margin: EdgeInsets.only(bottom: 4.0),
-
-                        padding: EdgeInsets.all(8.0),
-                        decoration: BoxDecoration(
-                          color: Colors.lightGreen,
-                          borderRadius: BorderRadius.circular(20.0),
-                        ),
-                        child: Text(
-                          "45 mins      ",
-                          style: TextStyle(
-                            color: Colors.white,
-                            fontWeight: FontWeight.bold,
+                          SizedBox(width: 10,height: 15,),
+                          Text(
+                            "Total time: 45 mins  ",
+                            style: TextStyle(
+                              color: Colors.black,
+                              fontWeight: FontWeight.bold,
+                            ),
                           ),
-                        ),
-                      ),
-                      Container(
-                        padding: EdgeInsets.all(8.0),
-                        margin: EdgeInsets.all(8.0),
-                        decoration: BoxDecoration(
-                          color: Colors.black12,
-                          borderRadius: BorderRadius.circular(10.0),
-                        ),
-                        child: Text(
-                          "4 People ",
-                          style: TextStyle(
-                            color: Colors.white,
-                            fontWeight: FontWeight.bold,
+                          SizedBox(width: 10,height: 15,),
+                          Text(
+                            "Size: 4 People ",
+                            style: TextStyle(
+                              color: Colors.black,
+                              fontWeight: FontWeight.bold,
+                            ),
                           ),
-                        ),
+                          SizedBox(width: 10,height: 10,),
+                        ],
+                        )
+
                       ),
                     ],
                   ),
@@ -1221,95 +1231,70 @@ isAlwaysShown: true,
               padding: const EdgeInsets.all(20),
               child: Container(
 
-                height: 30,
+                height: 50,
                 decoration: const BoxDecoration(
-                  color: Color(0xFFFF4D77D), // set the color of the container
+                  color: Color.fromARGB(200, 255, 236, 96), // set the color of the container
                   borderRadius: BorderRadius.all(Radius.circular(10)), // set the border radius
                 ),
 
 
                 child: Row(
-                  mainAxisAlignment: MainAxisAlignment.center,
-
                   children: [
+                    Column(
+                      crossAxisAlignment: CrossAxisAlignment.start,
+                      children: [
+                      Container(
 
-                    Text(
-                      subsubcategory.name,
-
-                      style: const TextStyle(fontSize: 20, fontWeight: FontWeight.bold,
-                          letterSpacing: 3.0, backgroundColor: Color(0xFFF4D67C)),
-
+                    child: const Text.rich(
+                      TextSpan(
+                          children: [
+                          TextSpan(text: "Ingredients", style: TextStyle(fontWeight: FontWeight.w600, fontSize: 25,)),
+                    ]
                     ),
-                    SizedBox(width: 10),
+                    ),
 
-                      Icon(Icons.favorite),
-                    SizedBox(width: 20),
-                    Icon(Icons.content_paste),
-
-
-
-                  ],
+            ),
+                ],
                 ),
+                ]
               ),
             ),
 
 
-            // Card(
-            //
-            //   color: Color(0xFFF4D67C),
-            //   child: SingleChildScrollView(
-            //     child: Column(
-            //       children: [
-            //         Text("Yemek Tarifi"),
-            //         Padding(
-            //           padding: const EdgeInsets.all(8.0),
-            //           child: Text(
-            //               "Kıymalı lahana sarması yapmaya lahanaları haşlamakla başlayalım  "
-            //                   "Lahana sarması iç harcı nasıl hazırlanır?  yemeklik doğranmış soğan, yıkanmış pirinç, kıyma , domates ve biber salçası, tuz, karabiber, pulbiber, pilavlık bulgur, zeytinyağı ve suyu uygun bir kapta iyice karıştıralım "
-            //
-            //           ),
-            //         ),
-            //       ],
-            //     ),
-            //   ),
-            // ),
-
-
-
-          Expanded(child:    ListView.builder(
+              Expanded(child:    ListView.builder(
 
     itemBuilder: (context, index) {
       itemCount: subsubcategory.subsubsubcategories.length;
       SubSubSubcategory subsubsubcategory = subsubcategory.subsubsubcategories[index];
 
 
-    return Card(
-      color: const Color(0xFFF4D67C), // Card rengi
-    shape: RoundedRectangleBorder(
-    borderRadius: BorderRadius.circular(10.0),
-    ),
-    elevation: 5.0, // Gölge kalınlığı
-    child: SizedBox(
-    width: double.infinity,
-      height: 300.0,// Card genişliği
-    child: Column(
-    children: <Widget>[
+            return Card(
+          color: const Color(0xFFF4D67C), // Card rengi
+        shape: RoundedRectangleBorder(
+        borderRadius: BorderRadius.circular(10.0),
+        ),
+        elevation: 5.0, // Gölge kalınlığı
+        child: SizedBox(
+        width: double.infinity,
+          height: 300.0,// Card genişliği
+        child: Column(
+        children: <Widget>[
 
-    ListTile(
-    title: Text("Instructions",textAlign: TextAlign.center), // Card başlığı
-    subtitle: Text('Kemiksiz olarak satın aldığınız fileto tavuk göğsünü tavuk şiş hazırlamak için iri küpler halinde kesin.En az 20 dakika marinasyon karışımında beklettiğiniz tavuk parçalarını, bir tavuk, bir arpacık soğan dilimi, bir kırmızı biber parçası olmak üzere tahta şişlere dizin Bütün olarak ya da servis tabağına tahta şişlerinden sıyırdığınız '),
+        ListTile(
+        title: Text("Instructions",textAlign: TextAlign.center), // Card başlığı
+        subtitle: Text('Kemiksiz olarak satın aldığınız fileto tavuk göğsünü tavuk şiş hazırlamak için iri küpler halinde kesin.En az 20 dakika marinasyon karışımında beklettiğiniz tavuk parçalarını, bir tavuk, bir arpacık soğan dilimi, bir kırmızı biber parçası olmak üzere tahta şişlere dizin Bütün olarak ya da servis tabağına tahta şişlerinden sıyırdığınız '),
 
-    ),
-  //  Divider(),
-       Text(subsubsubcategory.yemekTarifleri1[index]),
+        ),
+      //  Divider(),
+           Text(subsubsubcategory.yemekTarifleri1[index]),
 
-    ],
-    ),
-    ),
-    );
-    },
-    ),
-          ),
+        ],
+        ),
+        ),
+        );
+        },
+        ),
+              ),
 
 
 
