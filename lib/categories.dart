@@ -30,20 +30,28 @@ class _CategoriesPageState extends State<CategoriesPage> {
           subsubcategories: [
             SubSubcategory(
               id: 4,
-              name: 'Subcategory 4',
+              name: 'Pita',
 
               image: 'assets/categories/turkish.png',
               subsubsubcategories: [
                 SubSubSubcategory(
                   id:1,
-                  name: '',
+                  name: 'Pita',
                   yemekTarifleri : ['4 Tomatoes',
                     '1 Tablespoon of Olive Oil',
                     '1 Onion',
                     '250g Spaghetti',
                     'Spices',
                     'Cheese (optional)' ],
-                  yemekTarifleri1 : ['Kemiksiz olarak satın aldığınız fileto tavuk göğsünü tavuk şiş hazırlamak için iri küpler halinde kesin  Kabuğunun kolayca soyulabilmesi sıcak suda beklettiğiniz arpacık soğanları halka halka dilimleyin. Ortadan ikiye kesip çekirdeklerini çıkardığınız kırmızı biberi küçük parçalar halinde kesin.Tavuk şişin marinasyon karışımı için; zeytinyağı, taze sıkılmış limon suyu, yoğurt, toz kişniş, taze çekilmiş tane karabiber ve defne yaprağını tavuk etleriyle birlikte derin bir kapta harmanlayınEn az 20 dakika marinasyon karışımında beklettiğiniz tavuk parçalarını, bir tavuk, bir arpacık soğan dilimi, bir kırmızı biber parçası olmak üzere tahta şişlere dizin',
+                  yemekTarifleri1 : ['Take the yeast in a deep bowl, add warm water to it, mix and froth by activating.',
+  'Add half the flour and salt and mix. Add the remaining flour and olive oil and start kneading the dough.',
+  'Cover the knead until you get a dough that is not coarse but sticks to the hand, cover it in a warm place and leave it to ferment for 45 minutes.',
+  'While the dough is fermenting, grate the cheese, slice the sausages and prepare the inside.',
+  'Take the fermented dough on the floured counter, knead it lightly and divide it into 4 parts.',
+  'Roll out each piece long and thin.',
+  'Put the cheese grater in the middle of the rolled dough and place the sausage slices on it.',
+  'Fold the edges of the dough in one inch at a time and brush with egg yolk. Put 1-2 small pieces of butter on each pita.',
+  'Bake at 200-210 degrees until golden brown, slice and serve.',
                   ],
                   image:'assets/categories/pide.png',
 
@@ -91,18 +99,18 @@ class _CategoriesPageState extends State<CategoriesPage> {
           subsubcategories: [
             SubSubcategory(
               id: 4,
-              name: 'Subcategory 4',
-              image: 'assets/categories/turkish.png',
+              name: 'Pita with Sucuk',
+              image: 'assets/categories/pide.png',
                 subsubsubcategories: [
                   SubSubSubcategory(
                     id:4,
-                    name: 'doner',
-                    yemekTarifleri :['4 Tomatoes',
-                      '1 Tablespoon of Olive Oil',
-                      '1 Onion',
-                      '250g Spaghetti',
-                      'Spices',
-                      'Cheese (optional)' ],
+                    name: 'Pita with Sucuk',
+                    yemekTarifleri :['1 instant yeast (10 g)',
+                      '4-4,5 cups of flour (500 gr)',
+                      '1,5 cups + half a tea glass of warm water (350 ml)',
+                      '1 sweet spice salt',
+                      '2 tablespoon of olive oil',
+                      '1 egg yolk'],
                     yemekTarifleri1 : ['Kemiksiz olarak satın aldığınız fileto tavuk göğsünü tavuk şiş hazırlamak için iri küpler halinde kesin  Kabuğunun kolayca soyulabilmesi sıcak suda beklettiğiniz arpacık soğanları halka halka dilimleyin. Ortadan ikiye kesip çekirdeklerini çıkardığınız kırmızı biberi küçük parçalar halinde kesin.Tavuk şişin marinasyon karışımı için; zeytinyağı, taze sıkılmış limon suyu, yoğurt, toz kişniş, taze çekilmiş tane karabiber ve defne yaprağını tavuk etleriyle birlikte derin bir kapta harmanlayın 1.	En az 20 dakika marinasyon karışımında beklettiğiniz tavuk parçalarını, bir tavuk, bir arpacık soğan dilimi, bir kırmızı biber parçası olmak üzere tahta şişlere dizin',
                     ],
                     image:'assets/categories/pide.png',
@@ -113,7 +121,7 @@ class _CategoriesPageState extends State<CategoriesPage> {
             ),
             SubSubcategory(
               id: 4,
-              name: 'Subcategory 4',
+              name: 'Doner',
               image: 'assets/categories/turkish.png',
                 subsubsubcategories: [
                   SubSubSubcategory(
@@ -1219,6 +1227,9 @@ isAlwaysShown: true,
                     ],
                   ),
                 ),
+
+
+
             Padding(
               padding: const EdgeInsets.all(20),
               child: Container(
@@ -1267,6 +1278,7 @@ isAlwaysShown: true,
               ),),
                 ]
             ),
+
             Expanded(
               child:Center(
                 child: SizedBox(
@@ -1274,13 +1286,15 @@ isAlwaysShown: true,
                   width: 1000,
                   child: Scrollbar(
                     child: Padding(
-                      padding: const EdgeInsets.symmetric(horizontal: 0.0),  // add 20.0 pixels of padding to the left and right sides
+
+                      padding: const EdgeInsets.symmetric(horizontal: 50.0),  // add 20.0 pixels of padding to the left and right sides
+
                           child: GridView.builder(
                             itemCount: subsubcategory.subsubsubcategories.length,
 
                                   gridDelegate: const SliverGridDelegateWithMaxCrossAxisExtent(
-                                    childAspectRatio: 3 / 2,
-                                    maxCrossAxisExtent: 200,
+                                    childAspectRatio: 3 / 3,
+                                    maxCrossAxisExtent: 500,
                                     mainAxisSpacing: 20,
                                     crossAxisSpacing: 20,
                                   ),
@@ -1298,15 +1312,12 @@ isAlwaysShown: true,
                                       title: Column(
                                         mainAxisSize: MainAxisSize.min,
 
-                         // mainAxisAlignment: MainAxisAlignment.center,
-                                          children: <Widget>[
-                                            Row(
-                                            mainAxisAlignment: MainAxisAlignment.end,
-                                              children: const <Widget>[
-                                                // Icon(
-                                                //   Icons.star,
-                                                //   color: Colors.yellow,
-                                                // ),
+
+                          children: <Widget>[
+                            Row(
+                            mainAxisAlignment: MainAxisAlignment.end,
+                              children: const <Widget>[
+
 
                                               ],
                                             ),
@@ -1327,15 +1338,7 @@ isAlwaysShown: true,
                                                 ),
                                               ),
 
-                            // Padding(
-                            //
-                            //   padding: EdgeInsets.symmetric(vertical: 0),
-                            //
-                            //   child:
-                            //
-                            //   Text(subsubsubcategory.yemekTarifleri[index], textAlign: TextAlign.left,
-                            //   ),
-                            // ),
+
                           ],
                         ),
                       ),
