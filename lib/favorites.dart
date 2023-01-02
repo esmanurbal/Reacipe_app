@@ -72,7 +72,7 @@ class _favoritesState extends State<favorites> {
                 )),
             Padding(padding: const EdgeInsets.symmetric(horizontal:10,vertical: 10),
                 child:
-                Container(
+                  Container(
                   width: 378,
                   height: 149,
                   decoration: BoxDecoration(
@@ -84,10 +84,13 @@ class _favoritesState extends State<favorites> {
                     ),
                     color:const Color.fromARGB(200,244, 233, 173,),
                     borderRadius: BorderRadius.circular(30.0),
-                  ),
-                  alignment: Alignment.center,
-                  child: const Text("100 gram Adana kebap" "Prep Time: 20-25 min" "Kcal: For 100 gram 239 calorie."),
- 
+                    ),
+                    alignment: Alignment.centerRight,
+                    child: const Text("100 gram Adana kebap\nPrep Time: 20-25 min\nKcal: For 100 gram 239 calorie."),
+
+                  ) ),
+
+                 ]
                 )),
             Padding(padding: const EdgeInsets.symmetric(horizontal:10,vertical: 10),
                 child:
@@ -103,10 +106,12 @@ class _favoritesState extends State<favorites> {
                     ),
                     color:const Color.fromARGB(200,244, 233, 173,),
                     borderRadius: BorderRadius.circular(30.0),
-                  ),
-                  alignment: Alignment.center,
-                  child: const Text("Kani Salad Roll"  "Cucumber, Avocado / Kani Salad," "Scallion, Hot Sauce" "Prep Time: 20-25" " min Kcal: 239 calorie."),
-                )),
+                    ),
+                    alignment: Alignment.centerRight,
+                    child: const Text("Kani Salad Roll\nCucumber, Avocado / Kani Salad,\nScallion, Hot Sauce\nPrep Time: 20-25\nmin Kcal: 239 calorie."),
+
+                   )),
+
             Padding(padding: const EdgeInsets.symmetric(horizontal:10,vertical: 10),
                 child:
                 Container(
@@ -122,13 +127,16 @@ class _favoritesState extends State<favorites> {
                     color:const Color.fromARGB(200,244, 233, 173,),
                     borderRadius: BorderRadius.circular(30.0),
                   ),
-                  alignment: Alignment.center,
-                  child: const Text("TACO" "Kcal :for 1 Piece 375/kcal" "Prep Time: 30 dakika " "Cooking Time: 40 min"),
-                )),
+                  alignment: Alignment.centerRight,
+                  child: const Text("TACO\nKcal :for 1 Piece 375/kcal\nPrep Time: 30 dakika\nCooking Time: 40 min"),
+                ),
+               )
 
-          ],
-        ),
-      ),
-    );
+
+            );
+
+
+
+
   }
 }
