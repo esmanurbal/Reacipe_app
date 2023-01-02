@@ -1242,25 +1242,29 @@ isAlwaysShown: true,
                   color: const Color.fromARGB(100,249,215 ,129),
                   borderRadius: BorderRadius.circular(30.0),
                 ),
-                child:Column(
-                    children:const [
-                    Padding(padding: const EdgeInsets.only(top:15,right: 150),
-                      child:Text.rich(
-                        TextSpan(
-                          children: [
-                            TextSpan(text: "Ingredients: ", style: TextStyle(fontWeight: FontWeight.w600, fontSize: 15)),
-                            TextSpan(text: "\n"), // adds a newline
-                            TextSpan(text: "Instructions: ", style: TextStyle(fontWeight: FontWeight.w600, fontSize: 15)),
-                          ],
-                        ),
-                      )
-
-                    )
-                    ]
-                ),
-
+                child:
+                Column(
+                  children: [
+                    Padding(
+                      padding: const EdgeInsets.only(top: 15, left: 80),
+                      child: Row(
+                        children:  [
+                          const Text("Ingredients: ", style: TextStyle(fontWeight: FontWeight.w600, fontSize: 15)),
+                          SizedBox(width: 70), // add some horizontal space between the texts
+                          InkWell(
+                            onTap: () {
+                              Navigator.of(context).push(
+                                MaterialPageRoute(
+                                    builder: (context) => NotificationScreen()),);
+                            },
+                            child: Text("Instructions: ", style: TextStyle(fontWeight: FontWeight.w600, fontSize: 15)),
+                          ),
+                        ],
+                      ),
+                    ),
+                  ],
+                )
               ),),
-
                 ]
             ),
             Expanded(
@@ -1271,7 +1275,7 @@ isAlwaysShown: true,
                     return Card(
                       color: const Color(0xFFF4D67C), // Card rengi
                       shape: RoundedRectangleBorder(
-                      borderRadius: BorderRadius.circular(10.0),
+                      borderRadius: BorderRadius.circular(30.0),
                       ),
                       elevation: 5.0,
                       child: SizedBox(
@@ -1281,7 +1285,7 @@ isAlwaysShown: true,
                           children: <Widget>[
                             const SizedBox(height: 30,),
                             const ListTile(
-                              title: Text("Instructions",textAlign: TextAlign.center), // Card başlığı
+                              title: Text("İngredients",textAlign: TextAlign.center), // Card başlığı
 
                          ),
                             Text(subsubsubcategory.yemekTarifleri1[index]),

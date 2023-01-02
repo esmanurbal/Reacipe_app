@@ -90,9 +90,8 @@ class _favoritesState extends State<favorites> {
 
                   ) ),
 
-                 ]
-                )),
-            Padding(padding: const EdgeInsets.symmetric(horizontal:10,vertical: 10),
+
+        Padding(padding: const EdgeInsets.symmetric(horizontal:10,vertical: 10),
                 child:
                 Container(
                   width: 378,
@@ -111,14 +110,13 @@ class _favoritesState extends State<favorites> {
                     child: const Text("Kani Salad Roll\nCucumber, Avocado / Kani Salad,\nScallion, Hot Sauce\nPrep Time: 20-25\nmin Kcal: 239 calorie."),
 
                    )),
-
             Padding(padding: const EdgeInsets.symmetric(horizontal:10,vertical: 10),
                 child:
                 Container(
                   width: 378,
                   height: 149,
                   decoration: BoxDecoration(
-                    image: DecorationImage(
+                    image: const DecorationImage(
                       alignment: Alignment.centerLeft,
                       matchTextDirection: true,
                       repeat: ImageRepeat.noRepeat,
@@ -130,7 +128,9 @@ class _favoritesState extends State<favorites> {
                   alignment: Alignment.centerRight,
                   child: const Text("TACO\nKcal :for 1 Piece 375/kcal\nPrep Time: 30 dakika\nCooking Time: 40 min"),
                 ),
-               )
+               ),
+          ]
+        )),
 
 
             );
