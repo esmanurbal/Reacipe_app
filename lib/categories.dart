@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:recipe/components/constant.dart';
 import 'package:recipe/screens/NotificationScreen.dart';
 import 'package:recipe/Ingredients.dart';
-import 'package:recipe/components/color.dart';
+import 'package:recipe/components/constant.dart';
 
 
 class CategoriesPage extends StatefulWidget {

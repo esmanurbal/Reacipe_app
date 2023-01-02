@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:recipe/screens/NotificationScreen.dart';
 import 'package:recipe/components/constant.dart';
 import '../users.dart';
-import 'package:recipe/components/color.dart';
+
 
 
 class HomeScreen extends StatefulWidget{

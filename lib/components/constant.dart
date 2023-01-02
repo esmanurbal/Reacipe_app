@@ -10,3 +10,13 @@ const mercimek = 'assets/images/mercimek.png';
 const kPrimaryColor = Color(0xFF84AB5C);
 const kTextColor = Color(0xFF202E2E);
 const kTextLigntColor = Color(0xFF7286A5);
+
+BoxDecoration getTransitionalDecoration() {
+  return const BoxDecoration(
+    gradient: LinearGradient(
+      begin: Alignment.centerLeft,
+      end: Alignment.centerRight,
+      colors: [Color.fromARGB(248, 231, 206, 190), Color.fromARGB(200, 250, 250, 241)],
+    ),
+  );
+}

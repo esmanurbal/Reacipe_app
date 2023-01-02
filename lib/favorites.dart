@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:recipe/components/color.dart';
 import 'package:recipe/components/constant.dart';
 import 'package:recipe/components/navigator.dart';
 
@@ -57,14 +56,14 @@ class _favoritesState extends State<favorites> {
                           },
                           child: Icon(Icons.arrow_back), // narrow icon
                         ),
-                        Expanded(
+                        const Expanded(
                           child: Align(
                               alignment: Alignment.centerLeft,
                               child: Padding(
-                                padding: const EdgeInsets.only(left: 80),
+                                padding: EdgeInsets.only(left: 100),
                                 child: Text(
                                   "My favorites",
-                                  style: roboto.copyWith(
+                                  style:TextStyle( fontStyle: FontStyle.italic,
                                       fontWeight: FontWeight.w600, fontSize: 25, color: Colors.black),
                                 ),)
                           ),
