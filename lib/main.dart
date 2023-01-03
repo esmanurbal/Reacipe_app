@@ -3,7 +3,9 @@ import 'package:recipe/screens/loginScreen.dart';
 import 'package:recipe/screens/signupScreen.dart';
 import 'package:recipe/screens/startScreen.dart';
 
-void main() {
+
+
+import 'screens/loginScreen.dart';void main() {
   runApp(const MyApp());
 }
 
@@ -19,7 +21,12 @@ class MyApp extends StatelessWidget {
       debugShowCheckedModeBanner: false,
       title: 'Flutter Demo',
       theme: ThemeData(),
-      home:  StartScreen(),
+
+
+      home: LoginScreen(),
+
+      //home:  StartScreen(),
+
 
     );
 
