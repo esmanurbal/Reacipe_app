@@ -1,18 +1,11 @@
-import 'dart:ui';
 
 import 'package:flutter/material.dart';
 import 'package:recipe/components/constant.dart';
 import 'package:recipe/screens/NotificationScreen.dart';
-import 'package:recipe/Ingredients.dart';
-import 'package:recipe/components/constant.dart';
 
-
-import 'IngredientsScreen.dart';
 
 class CategoriesPage extends StatefulWidget {
   const CategoriesPage({super.key});
-
-
 
 
   @override

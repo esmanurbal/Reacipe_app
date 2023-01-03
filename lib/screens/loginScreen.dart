@@ -1,16 +1,14 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:recipe/components/constant.dart';
-
+import '../components/navigator.dart';
 class LoginScrenn extends StatefulWidget {
 
   @override
   State<LoginScrenn> createState() => _LoginScrennState();
 
-  TextEditingController nameController = TextEditingController();
-  TextEditingController passwordController = TextEditingController();
-
 }
+
 Widget buildEmail()  {
   return Column(
     crossAxisAlignment: CrossAxisAlignment.start,
@@ -40,7 +38,7 @@ Widget buildEmail()  {
           ]
         ),
         height: 60,
-        child: const TextField(
+        child: TextField(
           keyboardType: TextInputType.emailAddress,
           style: TextStyle(
             color: Colors.black87
@@ -60,18 +58,17 @@ Widget buildEmail()  {
   );
 }
 
-Widget buildPassword()  {
+Widget buildPassword(BuildContext context)  {
   return Column(
     crossAxisAlignment: CrossAxisAlignment.start,
     children: <Widget>[
       const SizedBox(width: 10,height: 70,),
-      Text(
+      const Text(
           'Password',
           style: TextStyle(
             color: Colors.black,
             fontSize: 16,
             fontWeight: FontWeight.bold,
-
           )
       ),
       SizedBox(height: 10),
@@ -80,7 +77,7 @@ Widget buildPassword()  {
         decoration: BoxDecoration(
             color: Colors.white,
             borderRadius: BorderRadius.circular(5),
-            boxShadow: [
+            boxShadow: const [
               BoxShadow(
                   color: Colors.black26,
                   blurRadius: 6,
@@ -89,11 +86,10 @@ Widget buildPassword()  {
             ]
         ),
         height: 60,
-        child: TextField(
+        child: const TextField(
           obscureText: true,
           style: TextStyle(
               color: Colors.black87
-
           ),
           decoration: InputDecoration(
               border: InputBorder.none,
@@ -130,10 +126,23 @@ Widget buildPassword()  {
           child:ElevatedButton(
             child: const Text('Login'),
             onPressed: () {
+
               var nameController;
               print(nameController.text);
               var passwordController;
               print(passwordController.text);
+
+              if (nameController.text == 'a@hotmail.com' && passwordController.text == 'a') {
+                Navigator.push(
+                  context,  // BuildContext of the current location in the tree
+                  MaterialPageRoute(
+                    builder: (context) =>  Navigotor(),
+                  ),
+                );
+              } else {
+                // Display an error message
+              }
+
             },
           )
       ),
@@ -147,7 +156,8 @@ Widget buildPassword()  {
                 'Sign in',
                 style: TextStyle(fontSize: 15),
               ),
-              onPressed: () {}
+              onPressed: () {
+              }
             //signup screen
           )
         ],
@@ -214,7 +224,7 @@ class _LoginScrennState extends State<LoginScrenn> {
                       SizedBox(height: 90),
                       buildEmail(),
                       SizedBox(height: 5),
-                      buildPassword(),
+                      buildPassword(context),
                     ],
                   ),
                 ),
