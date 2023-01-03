@@ -2,8 +2,6 @@ import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:recipe/components/constant.dart';
 
-
-
 class LoginScrenn extends StatefulWidget {
 
   @override
@@ -124,14 +122,15 @@ Widget buildPassword()  {
         ],
       ),
       Container(
+
           alignment: Alignment.bottomCenter,
           height: 50,
-          padding: const EdgeInsets.fromLTRB(5, 0, 0, 10),
-          child: ElevatedButton(
+
+          padding: const EdgeInsets.fromLTRB(250, 0, 0, 10),
+          child:ElevatedButton(
             child: const Text('Login'),
             onPressed: () {
               var nameController;
-
               print(nameController.text);
               var passwordController;
               print(passwordController.text);
@@ -195,7 +194,7 @@ class _LoginScrennState extends State<LoginScrenn> {
                     mainAxisAlignment: MainAxisAlignment.center,
                     children: <Widget>[
                       const SizedBox(width: 10,height: 10,),
-                      Padding(padding: const EdgeInsets.only(right: 50),
+                      Padding(padding: const EdgeInsets.only(top:50,right: 50),
                         child:
                         Text.rich(
                           TextSpan(
