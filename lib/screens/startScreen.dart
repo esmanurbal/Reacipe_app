@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:recipe/components/constant.dart';
 import 'package:recipe/components/navigator.dart';
+import 'package:recipe/screens/loginScreen.dart';
 
 
 void main() {
@@ -19,7 +20,7 @@ class _StartScreenState extends State<StartScreen> {
     Future.delayed(const Duration(seconds: 5), () {
       Navigator.pushReplacement(
         context,
-        MaterialPageRoute(builder: (context) => const Navigotor()),
+        MaterialPageRoute(builder: (context) => LoginScrenn()),
       );
     });
   }

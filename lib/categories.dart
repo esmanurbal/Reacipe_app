@@ -11,8 +11,6 @@ class CategoriesPage extends StatefulWidget {
   const CategoriesPage({super.key});
 
 
-
-
   @override
   _CategoriesPageState createState() => _CategoriesPageState();
 }
