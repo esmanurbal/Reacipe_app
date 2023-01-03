@@ -20,7 +20,7 @@ class _StartScreenState extends State<StartScreen> {
     Future.delayed(const Duration(seconds: 5), () {
       Navigator.pushReplacement(
         context,
-        MaterialPageRoute(builder: (context) => LoginScrenn()),
+        MaterialPageRoute(builder: (context) => LoginScreen()),
       );
     });
   }

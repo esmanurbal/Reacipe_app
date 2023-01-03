@@ -2,10 +2,10 @@ import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:recipe/components/constant.dart';
 import '../components/navigator.dart';
-class LoginScrenn extends StatefulWidget {
+class LoginScreen extends StatefulWidget {
 
   @override
-  State<LoginScrenn> createState() => _LoginScrennState();
+  State<LoginScreen> createState() => _LoginScreenState();
 
 }
 
@@ -170,7 +170,7 @@ Widget buildPassword(BuildContext context)  {
 
 
 
-class _LoginScrennState extends State<LoginScrenn> {
+class _LoginScreenState extends State<LoginScreen> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(

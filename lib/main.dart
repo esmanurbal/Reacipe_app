@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:recipe/screens/loginScreen.dart';
+import 'package:recipe/screens/signupScreen.dart';
 import 'package:recipe/screens/startScreen.dart';
 
 void main() {
