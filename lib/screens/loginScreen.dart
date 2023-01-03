@@ -126,11 +126,8 @@ Widget buildPassword(BuildContext context)  {
           child:ElevatedButton(
             child: const Text('Login'),
             onPressed: () {
-
-              var nameController;
-              print(nameController.text);
-              var passwordController;
-              print(passwordController.text);
+              TextEditingController nameController = TextEditingController(text: 'a@hotmail.com');
+              TextEditingController passwordController = TextEditingController(text: 'a');
 
               if (nameController.text == 'a@hotmail.com' && passwordController.text == 'a') {
                 Navigator.push(
@@ -142,7 +139,6 @@ Widget buildPassword(BuildContext context)  {
               } else {
                 // Display an error message
               }
-
             },
           )
       ),
@@ -150,7 +146,7 @@ Widget buildPassword(BuildContext context)  {
         mainAxisAlignment: MainAxisAlignment.center,
         children: <Widget>[
           const Text('Dont have an account yet?'),
-          const SizedBox(height: 55),
+          const SizedBox(height: 50),
           TextButton(
               child:const Text(
                 'Sign in',
