@@ -7,7 +7,6 @@ class SignupPage extends StatefulWidget {
   @override
   State<SignupPage> createState() => _SignupPageState();
 }
-
 class _SignupPageState extends State<SignupPage> {
   TextEditingController nameController = TextEditingController();
   TextEditingController passwordController = TextEditingController();
@@ -43,7 +42,7 @@ class _SignupPageState extends State<SignupPage> {
                     ),
                     child: TextField(
                       controller: nameController,
-                      decoration: InputDecoration(
+                      decoration: const InputDecoration(
                         labelText: 'Nickname',
                       ),
                     ),

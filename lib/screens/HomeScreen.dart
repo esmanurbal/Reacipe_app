@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:recipe/UserWidget.dart';
+import 'package:recipe/components/navigator.dart';
 import 'package:recipe/screens/NotificationScreen.dart';
 import 'package:recipe/components/constant.dart';
 import '../users.dart';
@@ -13,10 +15,6 @@ class HomeScreen extends StatefulWidget{
 class _HomeScreenState extends State<HomeScreen>{
   @override
   Widget build(BuildContext context){
-
-    debugShowCheckedModeBanner: false;
-
-
     return Scaffold(
         body:
         Container(
@@ -75,21 +73,29 @@ class _HomeScreenState extends State<HomeScreen>{
                         children: [
                           Padding(
                             padding: const EdgeInsets.only(top:60,left:10),
-                            child: Container(
-                              height: 80,
-                              width: 80,
-                              decoration: BoxDecoration(
-                                shape: BoxShape.circle,
-                                image: DecorationImage(
-                                  image: AssetImage(users[2].image),
-                                  fit: BoxFit.cover,
-                                  alignment: Alignment.bottomCenter,
+                            child: InkWell(
+                              onTap: () {
+                                // Add your on-click event here
+                                Navigator.of(context).push(
+                                  MaterialPageRoute(
+                                      builder: (context) => UserWidget()),);
+                              },
+                              child: Container(
+                                height: 80,
+                                width: 80,
+                                decoration: BoxDecoration(
+                                  shape: BoxShape.circle,
+                                  image: DecorationImage(
+                                    image: AssetImage(users[2].image),
+                                    fit: BoxFit.cover,
+                                    alignment: Alignment.bottomCenter,
+                                  ),
                                 ),
                               ),
-
                             ),
                           ),
-                           Padding(
+
+                          Padding(
                              padding: const EdgeInsets.symmetric(horizontal: 40,vertical: 20),
                             child: Align(
                               alignment: Alignment.topRight,

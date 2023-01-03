@@ -1,11 +1,9 @@
 
-import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
 import 'package:google_nav_bar/google_nav_bar.dart';
 import 'package:recipe/UserWidget.dart';
 import 'package:recipe/categories.dart';
 import 'package:recipe/favorites.dart';
-
 import 'package:recipe/screens/HomeScreen.dart';
 
 class Navigotor extends StatefulWidget{

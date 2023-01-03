@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:recipe/screens/loginScreen.dart';
+import 'package:recipe/screens/signupScreen.dart';
 import 'package:recipe/screens/startScreen.dart';
 
 
@@ -17,12 +19,14 @@ class MyApp extends StatelessWidget {
 
     return MaterialApp(
       debugShowCheckedModeBanner: false,
-
       title: 'Flutter Demo',
       theme: ThemeData(),
 
 
-      home: LoginScrenn(),
+      home: LoginScreen(),
+
+      //home:  StartScreen(),
+
 
     );
 
