@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:recipe/UserWidget.dart';
-import 'package:recipe/components/navigator.dart';
 import 'package:recipe/screens/NotificationScreen.dart';
 import 'package:recipe/components/constant.dart';
 import '../users.dart';
@@ -257,10 +256,10 @@ class _HomeScreenState extends State<HomeScreen>{
                               child: Stack(
                                 children: [
                                   Positioned(
-                                    right:90,
+                                    left:30,
                                     top: 10,
                                     child: Text(
-                                      'Your Menu',
+                                      'Today s Fresh Recipe',
                                       style:roboto.copyWith(color:Colors.black,
                                           fontSize: 14,
                                           fontWeight: FontWeight.bold
@@ -275,9 +274,56 @@ class _HomeScreenState extends State<HomeScreen>{
                                       decoration: BoxDecoration(
                                         color: const Color.fromARGB(100,249,215 ,129),
                                         borderRadius: BorderRadius.circular(30.0),
-                                      ),),)
+                                      ),),
+
+                                  ),
+                                  Transform.translate(offset:const Offset(70.0, 110.0),
+                                    child:Container(
+                                      width:100 ,
+                                      height: 90,
+                                      decoration: const BoxDecoration(
+                                          shape: BoxShape.circle,
+                                          image:DecorationImage(
+                                              image: AssetImage('assets/images/susi.png'),
+                                              fit:BoxFit.cover)),
+
+                                    ),),
+                                  Positioned(
+                                    left:30,
+                                    top: 210,
+                                    width: 127,
+                                    height: 83,
+                                    child: Text(
+                                      'Lets take those who are wondering how to cook lentil soup to our homemade lentil soup recipe.',
+                                      style:roboto.copyWith(color:Colors.black,
+                                        fontSize: 12,),
+
+                                    ),
+                                  ),
+                                  const Positioned(
+                                    left:84,
+                                    top: 295,
+                                    child: Icon(Icons.star,size: 15,),
+
+                                  ),
+                                  const Positioned(
+                                    left:100,
+                                    top: 295,
+                                    child: Icon(Icons.star,size: 15,),
+
+                                  ),
+                                  const Positioned(
+                                    left:114,
+                                    top: 295,
+                                    child: Icon(Icons.star,size: 15,),
+
+                                  ),
+
+
                                 ],
+
                               ),
+
                             ),
                           ),
                         ]),

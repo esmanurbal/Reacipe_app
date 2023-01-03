@@ -14,11 +14,8 @@ class _UserWidgetState extends State<UserWidget> {
 
   @override
   Widget build(BuildContext context) {
-
     return Scaffold(
-
         body:ListView(
-
           padding: EdgeInsets.zero,
           children: <Widget>[
             buidTop(),

@@ -42,8 +42,8 @@ class _StartScreenState extends State<StartScreen> {
             RichText(
               text:TextSpan(
                 children: [
-                   TextSpan(text: "R", style: TextStyle(fontWeight: FontWeight.w600, fontSize: 50,color: Color.fromARGB(200, 154,6,24))),
-                   TextSpan(text: "E", style: TextStyle(fontWeight: FontWeight.w600, fontSize: 50,color: Color.fromARGB(200,154,6,24))),
+                   const TextSpan(text: "R", style: TextStyle(fontWeight: FontWeight.w600, fontSize: 50,color: Color.fromARGB(200, 154,6,24))),
+                   const TextSpan(text: "E", style: TextStyle(fontWeight: FontWeight.w600, fontSize: 50,color: Color.fromARGB(200,154,6,24))),
                    TextSpan(text: "C", style: TextStyle(fontWeight: FontWeight.w600, fontSize: 50,color: Color.fromARGB(200,235,23,49))),
                    TextSpan(children:[WidgetSpan(child: Image.asset(recipeGif,height:120,width:120,)),]),
                    TextSpan(text: "P", style: TextStyle(fontWeight: FontWeight.w600, fontSize: 50,color: Color.fromARGB(200,87,4,14))),

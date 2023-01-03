@@ -9,7 +9,7 @@ class LoginScreen extends StatefulWidget {
 
 }
 
-Widget buildEmail()  {
+Widget buildEmail() {
   return Column(
     crossAxisAlignment: CrossAxisAlignment.start,
     children: <Widget>[
